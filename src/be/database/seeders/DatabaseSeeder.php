@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use DDD\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use DDD\Domain\Users\User;
 use Illuminate\Database\Seeder;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {

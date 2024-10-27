@@ -1,12 +1,12 @@
 <?php
 
-namespace DDD\Console\Commands;
+namespace DDD\App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Composer;
-use Symfony\Component\Finder\Finder;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Composer;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Finder\Finder;
 
 class AppName extends Command
 {
