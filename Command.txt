@@ -1,0 +1,8 @@
+Create Laravel project
+
+docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
+
+
+docker-compose run --rm artisan app:check-message-update
+
+docker compose run --rm artisan app:check-message-update

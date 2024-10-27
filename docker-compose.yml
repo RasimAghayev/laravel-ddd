@@ -1,0 +1,98 @@
+name: "laravel_ddd"
+networks:
+  laravel_ddd:
+    name: laravel_ddd
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    container_name: nginx
+    depends_on:
+      - php
+      - pgsql
+      - redis
+    ports:
+      - "${APP_PORT:-80}:80"
+      - "${APP_PORT_SSL:-443}:443"
+    volumes:
+      - ./src:/var/www/html:delegated
+    networks:
+      - laravel_ddd
+
+  php:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    container_name: php
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - laravel_ddd
+
+  composer:
+    build:
+      context: .
+      dockerfile: composer.dockerfile
+    container_name: composer
+    volumes:
+      - ./src/be:/var/www/html/be
+    working_dir: /var/www/html/be
+    networks:
+      - laravel_ddd
+
+  artisan:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    container_name: artisan
+    volumes:
+      - ./src/be:/var/www/html/be
+    working_dir: /var/www/html/be
+    entrypoint: ["php", "artisan"]
+    networks:
+      - laravel_ddd
+
+  phpunit:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    container_name: phpunit
+    volumes:
+      - ./src/be:/var/www/html/be
+    working_dir: /var/www/html/be
+    entrypoint: ["/var/www/html/be/vendor/bin/phpunit"]
+    networks:
+      - laravel_ddd
+
+  pgsql:
+    image: postgres:latest
+    container_name: pgsql
+    restart: always
+    shm_size: 128mb
+    ports:
+      - 6432:5432
+    volumes:
+      - ./db/postgres:/var/lib/postgresql/data
+#      - ./scripts/db/sushi_kim_backup.sql:/docker-entrypoint-initdb.d/sushi_kim_backup.sql
+#      - ./scripts/restore.sh:/docker-entrypoint-initdb.d/restore.sh
+    environment:
+      - POSTGRES_DB=laravel
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+    networks:
+      - laravel_ddd
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    command: redis-server --requirepass root --save 20 1 --loglevel warning
+    environment:
+      - REDIS_PASSWORD=root
+    ports:
+      - "8002:6379"
+    volumes:
+      - ./db/redis:/data
+    networks:
+      - laravel_ddd
