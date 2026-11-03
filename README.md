@@ -1,5 +1,8 @@
 # Laravel DDD ()
 
+![Views](https://hits.sh/github.com/RasimAghayev/laravel-ddd.svg?label=views&color=0e75b6)
+
+
 # Create Laravel project
 ```shell
 docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
