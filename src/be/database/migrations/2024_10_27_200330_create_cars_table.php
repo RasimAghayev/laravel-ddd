@@ -6,20 +6,20 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
+            $table->string('brand');
+            $table->string('model');
+            $table->integer('year');
+            $table->integer('price_cents')->default(0);
+            $table->string('currency', 3)->default('USD');
+            $table->string('status')->default('active');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('cars');

@@ -3,10 +3,12 @@
 /db/mysql
 /db/redis
 /db/postgres
+/secrets/
 
 .vscode/*
 
 /src/be/vendor/
+/src/be/composer.lock
 /src/be/node_modules/
 /src/be/npm-debug.log
 /src/be/yarn-error.log
