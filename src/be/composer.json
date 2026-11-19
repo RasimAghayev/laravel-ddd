@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "rasimagayev/laravel-ddd",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Laravel DDD (Domain-Driven Design) API with Cars, Users, Orders, Products, and AuditLog domains.",
+    "keywords": ["laravel", "ddd", "domain-driven-design", "api", "rasimagayev"],
     "license": "MIT",
     "require": {
         "php": "^8.5.12",
