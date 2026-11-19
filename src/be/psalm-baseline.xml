@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<psalm
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/psalm"
+    xsi:schemaLocation="https://getpsalm.org/psalm vendor/vimeo/psalm/psalm.xsd"
+    totallyTyped="false"
+>
+</psalm>

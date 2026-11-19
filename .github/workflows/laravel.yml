@@ -7,8 +7,39 @@ on:
     branches: [master, develop]
 
 jobs:
+  lint-and-static-analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+          extensions: mbstring, pdo_sqlite, sqlite3
+          coverage: none
+          tools: composer:v2
+
+      - name: Copy .env
+        working-directory: src/be
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+      - name: Install Dependencies
+        working-directory: src/be
+        run: composer install --no-ansi --no-interaction --no-progress --prefer-dist
+
+      - name: Pint lint check
+        working-directory: src/be
+        run: ./vendor/bin/pint --test
+
+      - name: Psalm static analysis
+        working-directory: src/be
+        run: ./vendor/bin/psalm --no-cache --show-info=false
+
   laravel-tests:
     runs-on: ubuntu-latest
+    needs: lint-and-static-analysis
 
     steps:
       - uses: actions/checkout@v4

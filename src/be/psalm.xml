@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<psalm
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/psalm"
+    xsi:schemaLocation="https://getpsalm.org/psalm vendor/vimeo/psalm/psalm.xsd"
+    errorBaseline="psalm-baseline.xml"
+    resolveFromConfigPath="true"
+    finder>
+    <projectFiles>
+        <directory name="app"/>
+        <directory name="tests"/>
+        <ignore file="vendor"/>
+    </projectFiles>
+    <plugins>
+        <plugin class="Psalm\LaravelPlugin\Plugin"/>
+    </plugins>
+    <fileExtensions>
+        <extension name="php"/>
+    </fileExtensions>
+    <ignoreFiles>
+        <directory name="vendor"/>
+        <directory name="bootstrap/cache"/>
+        <directory name="storage/framework"/>
+        <directory name="database/migrations"/>
+        <directory name="database/factories"/>
+        <directory name="database/seeders"/>
+        <file>routes/console.php</file>
+    </ignoreFiles>
+</psalm>
