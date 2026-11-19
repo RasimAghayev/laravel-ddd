@@ -1,0 +1,402 @@
+openapi: 3.0.3
+info:
+  title: Laravel DDD API
+  description: DDD-structured Laravel API for Cars, Users, Orders, Products, AuditLog, Invoices, Payments, and Notifications
+  version: 1.0.0
+  contact:
+    name: Rasim Aghayev
+    email: security@rasimaghayev.com
+servers:
+  - url: /api/v1
+    description: Local development server
+paths:
+  /cars:
+    get:
+      summary: List cars
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a car
+      responses:
+        '201':
+          description: Created
+  /cars/{id}:
+    get:
+      summary: Get a car
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    put:
+      summary: Update a car
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    delete:
+      summary: Delete a car
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: Not found
+  /users:
+    get:
+      summary: List users
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a user
+      responses:
+        '201':
+          description: Created
+  /users/{id}:
+    get:
+      summary: Get a user
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    put:
+      summary: Update a user
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    delete:
+      summary: Delete a user
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: Not found
+  /orders:
+    get:
+      summary: List orders
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create an order
+      responses:
+        '201':
+          description: Created
+  /orders/{id}:
+    get:
+      summary: Get an order
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    put:
+      summary: Update an order
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    delete:
+      summary: Delete an order
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: Not found
+  /products:
+    get:
+      summary: List products
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a product
+      responses:
+        '201':
+          description: Created
+  /products/{id}:
+    get:
+      summary: Get a product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    put:
+      summary: Update a product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    delete:
+      summary: Delete a product
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: Not found
+  /audit-logs:
+    get:
+      summary: List audit logs
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create an audit log
+      responses:
+        '201':
+          description: Created
+  /audit-logs/{id}:
+    get:
+      summary: Get an audit log
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+  /invoices:
+    get:
+      summary: List invoices
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create an invoice
+      responses:
+        '201':
+          description: Created
+  /invoices/{id}:
+    get:
+      summary: Get an invoice
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    put:
+      summary: Update an invoice
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    delete:
+      summary: Delete an invoice
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: Not found
+  /payments:
+    get:
+      summary: List payments
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a payment
+      responses:
+        '201':
+          description: Created
+  /payments/{id}:
+    get:
+      summary: Get a payment
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    put:
+      summary: Update a payment
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    delete:
+      summary: Delete a payment
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: Not found
+  /notifications:
+    get:
+      summary: List notifications
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a notification
+      responses:
+        '201':
+          description: Created
+  /notifications/{id}:
+    get:
+      summary: Get a notification
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    put:
+      summary: Update a notification
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    delete:
+      summary: Delete a notification
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: Not found
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+components:
+  schemas: {}

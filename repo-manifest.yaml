@@ -1,0 +1,53 @@
+name: laravel-ddd
+type: service
+description: "Laravel DDD API with Cars, Users, Orders, Products, AuditLog, Invoices, Payments, and Notifications domains."
+version: "1.0.0"
+
+provides:
+  - api: openapi.yaml
+  - events:
+      - order.created
+      - order.confirmed
+      - order.shipped
+      - order.delivered
+      - order.cancelled
+      - product.created
+      - product.updated
+      - product.deleted
+      - invoice.created
+      - payment.received
+      - notification.sent
+
+depends_on:
+  services:
+    - user-service   # future: extracted Users domain
+    - payment-service # future: extracted Payments domain
+  libraries:
+    - rasimagayev/shared-lib@^1.0  # planned (Phase 13)
+
+runs_standalone: true
+
+related:
+  - repo: taskStarEx
+    why: "Frontend consumer of this API"
+  - repo: hash-api-laravel
+    why: "Shared authentication patterns"
+
+maintainers:
+  - name: Rasim Aghayev
+    email: security@rasimaghayev.com
+    github: RasimAghayev
+
+license: MIT
+
+repository: https://github.com/RasimAghayev/laravel-ddd
+
+docker:
+  image: ghcr.io/rasimaghayev/laravel-ddd
+  context: server/
+  dockerfile: server/docker-compose.yml
+
+ci:
+  workflow: .github/workflows/laravel.yml
+  target_branch: preview
+  dependabot: .github/dependabot.yml
