@@ -19,7 +19,6 @@ class Car extends Model
 
     protected $casts = [
         'price_cents' => 'integer',
-        'status' => CarStatus::class,
         'is_active' => 'boolean',
     ];
 
@@ -43,37 +42,34 @@ class Car extends Model
         return Price::fromCents((int) $this->price_cents, $this->currency ?? 'USD');
     }
 
-    public function status(): CarStatus
-    {
-        return $this->status ?? CarStatus::from(CarStatus::ACTIVE);
-    }
-
     public function isActive(): bool
     {
-        return $this->status->isActive();
+        $status = $this->getAttribute('status');
+
+        if ($status instanceof CarStatus) {
+            return $status->isActive();
+        }
+
+        return CarStatus::from($status ?? CarStatus::ACTIVE)->isActive();
     }
 
     public function activate(): void
     {
-        $this->status = CarStatus::ACTIVE;
-        $this->save();
+        $this->status = CarStatus::from(CarStatus::ACTIVE);
     }
 
     public function sell(): void
     {
-        $this->status = CarStatus::SOLD;
-        $this->save();
+        $this->status = CarStatus::from(CarStatus::SOLD);
     }
 
     public function reserve(): void
     {
-        $this->status = CarStatus::RESERVED;
-        $this->save();
+        $this->status = CarStatus::from(CarStatus::RESERVED);
     }
 
     public function maintenance(): void
     {
-        $this->status = CarStatus::MAINTENANCE;
-        $this->save();
+        $this->status = CarStatus::from(CarStatus::MAINTENANCE);
     }
 }

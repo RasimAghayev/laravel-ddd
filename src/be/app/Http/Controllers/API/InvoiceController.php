@@ -48,7 +48,7 @@ class InvoiceController extends Controller
 
         $invoice = $createInvoiceUseCase->execute($data);
 
-        return response()->json(new InvoiceResource($invoice), Response::HTTP_CREATED);
+        return response()->json(['data' => new InvoiceResource($invoice)], Response::HTTP_CREATED);
     }
 
     public function show(string $id, GetInvoiceUseCase $getInvoiceUseCase): JsonResponse
@@ -59,7 +59,7 @@ class InvoiceController extends Controller
             return response()->json(['message' => 'Invoice not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new InvoiceResource($invoice));
+        return response()->json(['data' => new InvoiceResource($invoice)]);
     }
 
     public function update(UpdateInvoiceRequest $request, string $id, UpdateInvoiceUseCase $updateInvoiceUseCase): JsonResponse
@@ -72,7 +72,7 @@ class InvoiceController extends Controller
             return response()->json(['message' => 'Invoice not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new InvoiceResource($invoice));
+        return response()->json(['data' => new InvoiceResource($invoice)]);
     }
 
     public function destroy(string $id, DeleteInvoiceUseCase $deleteInvoiceUseCase): JsonResponse

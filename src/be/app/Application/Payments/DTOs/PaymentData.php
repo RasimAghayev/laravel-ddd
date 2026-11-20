@@ -11,7 +11,7 @@ final class PaymentData
 {
     public function __construct(
         public readonly ?string $id,
-        public readonly string $orderId,
+        public readonly ?string $orderId,
         public readonly int $amountCents,
         public readonly string $currency,
         public readonly PaymentMethod $method,
@@ -23,8 +23,8 @@ final class PaymentData
     {
         return new self(
             id: $data['id'] ?? null,
-            orderId: $data['order_id'],
-            amountCents: (int) $data['amount_cents'],
+            orderId: isset($data['order_id']) ? (string) $data['order_id'] : null,
+            amountCents: (int) ($data['amount_cents'] ?? 0),
             currency: $data['currency'] ?? 'USD',
             method: PaymentMethod::from($data['method'] ?? PaymentMethod::CREDIT_CARD),
             status: PaymentStatus::from($data['status'] ?? PaymentStatus::PENDING),

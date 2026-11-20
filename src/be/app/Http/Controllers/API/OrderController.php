@@ -48,7 +48,7 @@ class OrderController extends Controller
 
         $order = $createOrderUseCase->execute($data);
 
-        return response()->json(new OrderResource($order), Response::HTTP_CREATED);
+        return response()->json(['data' => new OrderResource($order)], Response::HTTP_CREATED);
     }
 
     public function show(string $id, GetOrderUseCase $getOrderUseCase): JsonResponse
@@ -59,7 +59,7 @@ class OrderController extends Controller
             return response()->json(['message' => 'Order not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new OrderResource($order));
+        return response()->json(['data' => new OrderResource($order)]);
     }
 
     public function update(UpdateOrderRequest $request, string $id, UpdateOrderUseCase $updateOrderUseCase): JsonResponse
@@ -72,7 +72,7 @@ class OrderController extends Controller
             return response()->json(['message' => 'Order not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new OrderResource($order));
+        return response()->json(['data' => new OrderResource($order)]);
     }
 
     public function destroy(string $id, DeleteOrderUseCase $deleteOrderUseCase): JsonResponse

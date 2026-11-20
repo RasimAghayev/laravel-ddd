@@ -17,6 +17,7 @@ class AuditLog extends Model
 
     protected $casts = [
         'created_at' => 'datetime',
+        'changes' => 'array',
     ];
 
     public function actorType(): ?string
@@ -46,6 +47,6 @@ class AuditLog extends Model
 
     public function changes(): array
     {
-        return $this->changes ?? [];
+        return $this->getAttribute('changes') ?? [];
     }
 }

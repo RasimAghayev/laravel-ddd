@@ -48,7 +48,7 @@ class NotificationController extends Controller
 
         $notification = $createNotificationUseCase->execute($data);
 
-        return response()->json(new NotificationResource($notification), Response::HTTP_CREATED);
+        return response()->json(['data' => new NotificationResource($notification)], Response::HTTP_CREATED);
     }
 
     public function show(string $id, GetNotificationUseCase $getNotificationUseCase): JsonResponse
@@ -59,7 +59,7 @@ class NotificationController extends Controller
             return response()->json(['message' => 'Notification not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new NotificationResource($notification));
+        return response()->json(['data' => new NotificationResource($notification)]);
     }
 
     public function update(UpdateNotificationRequest $request, string $id, UpdateNotificationUseCase $updateNotificationUseCase): JsonResponse
@@ -72,7 +72,7 @@ class NotificationController extends Controller
             return response()->json(['message' => 'Notification not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new NotificationResource($notification));
+        return response()->json(['data' => new NotificationResource($notification)]);
     }
 
     public function destroy(string $id, DeleteNotificationUseCase $deleteNotificationUseCase): JsonResponse

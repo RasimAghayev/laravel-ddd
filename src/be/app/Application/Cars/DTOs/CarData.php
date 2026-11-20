@@ -11,8 +11,8 @@ final class CarData
 {
     public function __construct(
         public readonly ?string $id,
-        public readonly string $brand,
-        public readonly string $model,
+        public readonly ?string $brand,
+        public readonly ?string $model,
         public readonly int $year,
         public readonly Price $price,
         public readonly CarStatus $status,
@@ -22,10 +22,10 @@ final class CarData
     {
         return new self(
             id: $data['id'] ?? null,
-            brand: $data['brand'],
-            model: $data['model'],
-            year: (int) $data['year'],
-            price: Price::fromDecimal((string) $data['price'], $data['currency'] ?? 'USD'),
+            brand: $data['brand'] ?? null,
+            model: $data['model'] ?? null,
+            year: (int) ($data['year'] ?? 0),
+            price: Price::fromDecimal((string) ($data['price'] ?? '0.00'), $data['currency'] ?? 'USD'),
             status: CarStatus::from($data['status'] ?? CarStatus::ACTIVE),
         );
     }

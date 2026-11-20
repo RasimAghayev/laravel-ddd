@@ -12,7 +12,7 @@ class UserResourceCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'data' => UserResource::collection($this->collection)->toArray($request)['data'],
+            'data' => $this->collection->map(fn ($user) => (new UserResource($user))->toArray($request)),
             'meta' => [
                 'total' => $this->collection->count(),
             ],

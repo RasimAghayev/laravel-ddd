@@ -16,7 +16,7 @@ class UpdatePaymentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'order_id' => ['sometimes', 'string', 'exists:orders,id'],
+            'order_id' => ['sometimes', 'integer', 'exists:orders,id'],
             'amount_cents' => ['sometimes', 'integer', 'min:0'],
             'currency' => ['sometimes', 'string', 'size:3', 'in:USD,EUR,AZN'],
             'method' => ['sometimes', 'string', 'in:credit_card,bank_transfer,paypal,cash'],

@@ -48,7 +48,7 @@ class UserController extends Controller
 
         $user = $createUserUseCase->execute($data);
 
-        return response()->json(new UserResource($user), Response::HTTP_CREATED);
+        return response()->json(['data' => new UserResource($user)], Response::HTTP_CREATED);
     }
 
     public function show(string $id, GetUserUseCase $getUserUseCase): JsonResponse
@@ -59,7 +59,7 @@ class UserController extends Controller
             return response()->json(['message' => 'User not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new UserResource($user));
+        return response()->json(['data' => new UserResource($user)]);
     }
 
     public function update(UpdateUserRequest $request, string $id, UpdateUserUseCase $updateUserUseCase): JsonResponse
@@ -72,7 +72,7 @@ class UserController extends Controller
             return response()->json(['message' => 'User not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new UserResource($user));
+        return response()->json(['data' => new UserResource($user)]);
     }
 
     public function destroy(string $id, DeleteUserUseCase $deleteUserUseCase): JsonResponse

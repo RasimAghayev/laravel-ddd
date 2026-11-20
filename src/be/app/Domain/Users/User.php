@@ -38,25 +38,36 @@ class User extends Authenticatable
         return Email::from($this->email);
     }
 
-    public function role(): UserRole
+    public function userRole(): UserRole
     {
-        return $this->role ?? UserRole::from(UserRole::USER);
+        if ($this->role instanceof UserRole) {
+            return $this->role;
+        }
+
+        return UserRole::from($this->role ?? UserRole::USER);
+    }
+
+    public function getRoleAttribute($value)
+    {
+        if ($value instanceof UserRole) {
+            return (string) $value;
+        }
+
+        return (string) ($value ?? UserRole::USER);
     }
 
     public function isAdmin(): bool
     {
-        return $this->role->isAdmin();
+        return $this->userRole()->isAdmin();
     }
 
     public function promoteToAdmin(): void
     {
-        $this->role = UserRole::ADMIN;
-        $this->save();
+        $this->role = UserRole::from(UserRole::ADMIN);
     }
 
     public function demoteToUser(): void
     {
-        $this->role = UserRole::USER;
-        $this->save();
+        $this->role = UserRole::from(UserRole::USER);
     }
 }

@@ -23,9 +23,13 @@ class UpdateUserUseCase
             return null;
         }
 
-        $user->name = $data->name;
-        $user->email = (string) $data->email;
-        $user->role = $data->role;
+        if ($data->name !== null) {
+            $user->name = $data->name;
+        }
+        if ($data->email !== null) {
+            $user->email = (string) $data->email;
+        }
+        $user->role = (string) $data->role;
 
         if ($data->password !== '') {
             $user->password = Hash::make($data->password);

@@ -20,7 +20,6 @@ class Invoice extends Model
 
     protected $casts = [
         'amount_cents' => 'integer',
-        'status' => InvoiceStatus::class,
         'due_at' => 'datetime',
     ];
 
@@ -39,32 +38,30 @@ class Invoice extends Model
         return number_format($this->amount_cents / 100, 2, '.', '').' '.($this->currency ?? 'USD');
     }
 
-    public function status(): InvoiceStatus
-    {
-        return $this->status ?? InvoiceStatus::from(InvoiceStatus::DRAFT);
-    }
-
     public function isPaid(): bool
     {
-        return $this->status->isPaid();
+        $status = $this->getAttribute('status');
+
+        if ($status instanceof InvoiceStatus) {
+            return $status->isPaid();
+        }
+
+        return InvoiceStatus::from($status ?? InvoiceStatus::DRAFT)->isPaid();
     }
 
     public function issue(): void
     {
-        $this->status = InvoiceStatus::ISSUED;
-        $this->save();
+        $this->status = InvoiceStatus::from(InvoiceStatus::ISSUED);
     }
 
     public function pay(): void
     {
-        $this->status = InvoiceStatus::PAID;
-        $this->save();
+        $this->status = InvoiceStatus::from(InvoiceStatus::PAID);
     }
 
     public function void(): void
     {
-        $this->status = InvoiceStatus::VOID;
-        $this->save();
+        $this->status = InvoiceStatus::from(InvoiceStatus::VOID);
     }
 
     public function overdue(): bool

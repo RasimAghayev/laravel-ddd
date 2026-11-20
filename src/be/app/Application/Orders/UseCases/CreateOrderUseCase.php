@@ -17,10 +17,10 @@ class CreateOrderUseCase
     public function execute(OrderData $data): Order
     {
         $order = new Order;
-        $order->user_id = $data->userId;
+        $order->user_id = $data->userId ?? '';
         $order->total_cents = $data->totalCents;
         $order->currency = $data->currency;
-        $order->status = $data->status;
+        $order->status = (string) $data->status;
 
         $this->orderRepository->save($order);
 

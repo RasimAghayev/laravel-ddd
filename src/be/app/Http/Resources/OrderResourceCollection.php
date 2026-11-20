@@ -12,7 +12,7 @@ class OrderResourceCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'data' => OrderResource::collection($this->collection)->toArray($request)['data'],
+            'data' => $this->collection->map(fn ($item) => (new OrderResource($item))->toArray($request)),
             'meta' => [
                 'total' => $this->collection->count(),
             ],

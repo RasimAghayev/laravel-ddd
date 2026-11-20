@@ -16,7 +16,7 @@ class StoreInvoiceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'order_id' => ['required', 'string', 'exists:orders,id'],
+            'order_id' => ['required', 'integer', 'exists:orders,id'],
             'amount_cents' => ['required', 'integer', 'min:0'],
             'currency' => ['sometimes', 'string', 'size:3', 'in:USD,EUR,AZN'],
             'status' => ['sometimes', 'string', 'in:draft,issued,paid,overdue,void'],

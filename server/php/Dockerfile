@@ -22,14 +22,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && docker-php-ext-enable redis \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Stage 2: deps — Composer install with BuildKit cache mount
-FROM base AS deps
+# Stage 2: deps — Composer install with BuildKit cache mount (uses composer image)
+FROM composer:2 AS deps
 
 WORKDIR /var/www/html/be
 
 COPY src/be/composer.json src/be/composer.json* ./
 RUN --mount=type=cache,target=/root/.composer/cache \
-    composer install --no-ansi --no-interaction --no-progress --prefer-dist --no-dev || true
+    composer install --no-ansi --no-interaction --no-progress --prefer-dist --no-dev --ignore-platform-req=php || true
 
 # Stage 3: build — copy application code
 FROM base AS build
@@ -58,8 +58,10 @@ FROM php:8.5-fpm AS runtime
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
     libzip-dev \
+    libonig-dev \
     zip \
     curl \
+    procps \
     && docker-php-ext-install pdo pdo_pgsql pdo_mysql mbstring bcmath zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 

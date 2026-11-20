@@ -53,6 +53,9 @@
     </UnusedClass>
   </file>
   <file src="app/Application/AuditLog/DTOs/AuditLogData.php">
+    <PossiblyNullArgument>
+      <code><![CDATA[$data['action'] ?? null]]></code>
+    </PossiblyNullArgument>
     <PossiblyUnusedMethod>
       <code><![CDATA[toArray]]></code>
     </PossiblyUnusedMethod>
@@ -398,15 +401,9 @@
     <ClassMustBeFinal>
       <code><![CDATA[AuditLog]]></code>
     </ClassMustBeFinal>
-    <DocblockTypeContradiction>
-      <code><![CDATA[[]]]></code>
-    </DocblockTypeContradiction>
     <MissingTemplateParam>
       <code><![CDATA[HasFactory]]></code>
     </MissingTemplateParam>
-    <RedundantConditionGivenDocblockType>
-      <code><![CDATA[$this->changes]]></code>
-    </RedundantConditionGivenDocblockType>
     <UndefinedThisPropertyFetch>
       <code><![CDATA[$this->action]]></code>
       <code><![CDATA[$this->actor_id]]></code>
@@ -435,7 +432,6 @@
       <code><![CDATA[brand]]></code>
       <code><![CDATA[maintenance]]></code>
       <code><![CDATA[model]]></code>
-      <code><![CDATA[status]]></code>
       <code><![CDATA[year]]></code>
     </PossiblyUnusedMethod>
     <UndefinedThisPropertyAssignment>
@@ -449,8 +445,6 @@
       <code><![CDATA[$this->currency]]></code>
       <code><![CDATA[$this->model]]></code>
       <code><![CDATA[$this->price_cents]]></code>
-      <code><![CDATA[$this->status]]></code>
-      <code><![CDATA[$this->status]]></code>
       <code><![CDATA[$this->year]]></code>
     </UndefinedThisPropertyFetch>
   </file>
@@ -461,7 +455,6 @@
   </file>
   <file src="app/Domain/Cars/ValueObjects/CarStatus.php">
     <PossiblyUnusedMethod>
-      <code><![CDATA[isActive]]></code>
       <code><![CDATA[isSold]]></code>
     </PossiblyUnusedMethod>
   </file>
@@ -480,7 +473,6 @@
     <PossiblyUnusedMethod>
       <code><![CDATA[order]]></code>
       <code><![CDATA[overdue]]></code>
-      <code><![CDATA[status]]></code>
     </PossiblyUnusedMethod>
     <UndefinedThisPropertyAssignment>
       <code><![CDATA[$this->status]]></code>
@@ -491,8 +483,6 @@
       <code><![CDATA[$this->amount_cents]]></code>
       <code><![CDATA[$this->currency]]></code>
       <code><![CDATA[$this->due_at]]></code>
-      <code><![CDATA[$this->status]]></code>
-      <code><![CDATA[$this->status]]></code>
     </UndefinedThisPropertyFetch>
   </file>
   <file src="app/Domain/Invoices/Repository/InvoiceRepositoryInterface.php">
@@ -506,7 +496,6 @@
     <PossiblyUnusedMethod>
       <code><![CDATA[isIssued]]></code>
       <code><![CDATA[isOverdue]]></code>
-      <code><![CDATA[isPaid]]></code>
       <code><![CDATA[isVoid]]></code>
     </PossiblyUnusedMethod>
   </file>
@@ -517,20 +506,13 @@
     <MissingTemplateParam>
       <code><![CDATA[HasFactory]]></code>
     </MissingTemplateParam>
-    <PossiblyUnusedMethod>
-      <code><![CDATA[status]]></code>
-    </PossiblyUnusedMethod>
     <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->sent_at]]></code>
       <code><![CDATA[$this->status]]></code>
       <code><![CDATA[$this->status]]></code>
       <code><![CDATA[$this->status]]></code>
     </UndefinedThisPropertyAssignment>
     <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->channel]]></code>
       <code><![CDATA[$this->recipient_type]]></code>
-      <code><![CDATA[$this->status]]></code>
-      <code><![CDATA[$this->status]]></code>
     </UndefinedThisPropertyFetch>
   </file>
   <file src="app/Domain/Notifications/Repository/NotificationRepositoryInterface.php">
@@ -545,7 +527,6 @@
       <code><![CDATA[isFailed]]></code>
       <code><![CDATA[isPending]]></code>
       <code><![CDATA[isRead]]></code>
-      <code><![CDATA[isSent]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="app/Domain/Orders/Order.php">
@@ -556,7 +537,6 @@
       <code><![CDATA[HasFactory]]></code>
     </MissingTemplateParam>
     <PossiblyUnusedMethod>
-      <code><![CDATA[status]]></code>
       <code><![CDATA[user]]></code>
     </PossiblyUnusedMethod>
     <UndefinedThisPropertyAssignment>
@@ -567,8 +547,6 @@
     </UndefinedThisPropertyAssignment>
     <UndefinedThisPropertyFetch>
       <code><![CDATA[$this->currency]]></code>
-      <code><![CDATA[$this->status]]></code>
-      <code><![CDATA[$this->status]]></code>
       <code><![CDATA[$this->total_cents]]></code>
     </UndefinedThisPropertyFetch>
   </file>
@@ -583,7 +561,6 @@
       <code><![CDATA[isCancelled]]></code>
       <code><![CDATA[isConfirmed]]></code>
       <code><![CDATA[isDelivered]]></code>
-      <code><![CDATA[isPending]]></code>
       <code><![CDATA[isShipped]]></code>
     </PossiblyUnusedMethod>
   </file>
@@ -596,10 +573,8 @@
     </MissingTemplateParam>
     <PossiblyUnusedMethod>
       <code><![CDATA[order]]></code>
-      <code><![CDATA[status]]></code>
     </PossiblyUnusedMethod>
     <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->paid_at]]></code>
       <code><![CDATA[$this->status]]></code>
       <code><![CDATA[$this->status]]></code>
       <code><![CDATA[$this->status]]></code>
@@ -608,8 +583,6 @@
     <UndefinedThisPropertyFetch>
       <code><![CDATA[$this->amount_cents]]></code>
       <code><![CDATA[$this->currency]]></code>
-      <code><![CDATA[$this->status]]></code>
-      <code><![CDATA[$this->status]]></code>
       <code><![CDATA[$this->transaction_reference]]></code>
     </UndefinedThisPropertyFetch>
   </file>
@@ -624,7 +597,6 @@
     <PossiblyUnusedMethod>
       <code><![CDATA[isCancelled]]></code>
       <code><![CDATA[isFailed]]></code>
-      <code><![CDATA[isPaid]]></code>
       <code><![CDATA[isPending]]></code>
       <code><![CDATA[isRefunded]]></code>
     </PossiblyUnusedMethod>
@@ -638,7 +610,7 @@
     </MissingTemplateParam>
     <PossiblyUnusedMethod>
       <code><![CDATA[activate]]></code>
-      <code><![CDATA[status]]></code>
+      <code><![CDATA[sku]]></code>
     </PossiblyUnusedMethod>
     <UndefinedThisPropertyAssignment>
       <code><![CDATA[$this->status]]></code>
@@ -648,8 +620,6 @@
     <UndefinedThisPropertyFetch>
       <code><![CDATA[$this->currency]]></code>
       <code><![CDATA[$this->price_cents]]></code>
-      <code><![CDATA[$this->status]]></code>
-      <code><![CDATA[$this->status]]></code>
     </UndefinedThisPropertyFetch>
   </file>
   <file src="app/Domain/Products/Repository/ProductRepositoryInterface.php">
@@ -660,7 +630,6 @@
   </file>
   <file src="app/Domain/Products/ValueObjects/ProductStatus.php">
     <PossiblyUnusedMethod>
-      <code><![CDATA[isActive]]></code>
       <code><![CDATA[isArchived]]></code>
       <code><![CDATA[isInactive]]></code>
     </PossiblyUnusedMethod>
@@ -674,11 +643,17 @@
     <ClassMustBeFinal>
       <code><![CDATA[User]]></code>
     </ClassMustBeFinal>
+    <MissingParamType>
+      <code><![CDATA[$value]]></code>
+    </MissingParamType>
+    <MissingReturnType>
+      <code><![CDATA[getRoleAttribute]]></code>
+    </MissingReturnType>
     <MissingTemplateParam>
       <code><![CDATA[HasFactory]]></code>
     </MissingTemplateParam>
     <PossiblyUnusedMethod>
-      <code><![CDATA[role]]></code>
+      <code><![CDATA[getRoleAttribute]]></code>
     </PossiblyUnusedMethod>
     <UndefinedThisPropertyAssignment>
       <code><![CDATA[$this->role]]></code>
@@ -687,13 +662,7 @@
     <UndefinedThisPropertyFetch>
       <code><![CDATA[$this->email]]></code>
       <code><![CDATA[$this->role]]></code>
-      <code><![CDATA[$this->role]]></code>
     </UndefinedThisPropertyFetch>
-  </file>
-  <file src="app/Domain/Users/ValueObjects/UserRole.php">
-    <PossiblyUnusedMethod>
-      <code><![CDATA[isAdmin]]></code>
-    </PossiblyUnusedMethod>
   </file>
   <file src="app/Http/Controllers/API/AuditLogController.php">
     <ClassMustBeFinal>
@@ -1190,14 +1159,11 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <PossiblyNullReference>
-      <code><![CDATA[count]]></code>
+      <code><![CDATA[map]]></code>
     </PossiblyNullReference>
     <PropertyNotSetInConstructor>
       <code><![CDATA[AuditLogResourceCollection]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[AuditLogResource::collection($this->collection)->toArray($request)]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="app/Http/Resources/CarResource.php">
     <ClassMustBeFinal>
@@ -1225,14 +1191,11 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <PossiblyNullReference>
-      <code><![CDATA[count]]></code>
+      <code><![CDATA[map]]></code>
     </PossiblyNullReference>
     <PropertyNotSetInConstructor>
       <code><![CDATA[CarResourceCollection]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[CarResource::collection($this->collection)->toArray($request)]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="app/Http/Resources/InvoiceResource.php">
     <ClassMustBeFinal>
@@ -1259,14 +1222,11 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <PossiblyNullReference>
-      <code><![CDATA[count]]></code>
+      <code><![CDATA[map]]></code>
     </PossiblyNullReference>
     <PropertyNotSetInConstructor>
       <code><![CDATA[InvoiceResourceCollection]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[InvoiceResource::collection($this->collection)->toArray($request)]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="app/Http/Resources/NotificationResource.php">
     <ClassMustBeFinal>
@@ -1276,6 +1236,7 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$notification->channel]]></code>
       <code><![CDATA[$notification->content]]></code>
       <code><![CDATA[$notification->created_at]]></code>
       <code><![CDATA[$notification->recipient_id]]></code>
@@ -1293,14 +1254,11 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <PossiblyNullReference>
-      <code><![CDATA[count]]></code>
+      <code><![CDATA[map]]></code>
     </PossiblyNullReference>
     <PropertyNotSetInConstructor>
       <code><![CDATA[NotificationResourceCollection]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[NotificationResource::collection($this->collection)->toArray($request)]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="app/Http/Resources/OrderResource.php">
     <ClassMustBeFinal>
@@ -1326,14 +1284,11 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <PossiblyNullReference>
-      <code><![CDATA[count]]></code>
+      <code><![CDATA[map]]></code>
     </PossiblyNullReference>
     <PropertyNotSetInConstructor>
       <code><![CDATA[OrderResourceCollection]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[OrderResource::collection($this->collection)->toArray($request)]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="app/Http/Resources/PaymentResource.php">
     <ClassMustBeFinal>
@@ -1361,14 +1316,11 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <PossiblyNullReference>
-      <code><![CDATA[count]]></code>
+      <code><![CDATA[map]]></code>
     </PossiblyNullReference>
     <PropertyNotSetInConstructor>
       <code><![CDATA[PaymentResourceCollection]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[PaymentResource::collection($this->collection)->toArray($request)]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="app/Http/Resources/ProductResource.php">
     <ClassMustBeFinal>
@@ -1383,6 +1335,7 @@
       <code><![CDATA[$product->description]]></code>
       <code><![CDATA[$product->name]]></code>
       <code><![CDATA[$product->price_cents]]></code>
+      <code><![CDATA[$product->sku]]></code>
       <code><![CDATA[$product->status]]></code>
       <code><![CDATA[$product->stock_quantity]]></code>
       <code><![CDATA[$product->updated_at]]></code>
@@ -1396,14 +1349,11 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <PossiblyNullReference>
-      <code><![CDATA[count]]></code>
+      <code><![CDATA[map]]></code>
     </PossiblyNullReference>
     <PropertyNotSetInConstructor>
       <code><![CDATA[ProductResourceCollection]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[ProductResource::collection($this->collection)->toArray($request)]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="app/Http/Resources/UserResource.php">
     <ClassMustBeFinal>
@@ -1428,14 +1378,11 @@
       <code><![CDATA[public function toArray(Request $request): array]]></code>
     </MissingOverrideAttribute>
     <PossiblyNullReference>
-      <code><![CDATA[count]]></code>
+      <code><![CDATA[map]]></code>
     </PossiblyNullReference>
     <PropertyNotSetInConstructor>
       <code><![CDATA[UserResourceCollection]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[UserResource::collection($this->collection)->toArray($request)]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="app/Infrastructure/Persistence/Eloquent/AuditLog/EloquentAuditLogRepository.php">
     <ClassMustBeFinal>

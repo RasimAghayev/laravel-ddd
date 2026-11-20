@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DDD\Http\Resources;
 
 use DDD\Domain\Notifications\Notification;
+use DDD\Domain\Notifications\ValueObjects\NotificationChannel;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -19,7 +20,7 @@ class NotificationResource extends JsonResource
             'id' => (string) $notification->getKey(),
             'recipient_type' => $notification->recipientType(),
             'recipient_id' => $notification->recipient_id,
-            'channel' => (string) $notification->channel(),
+            'channel' => (string) (($channel = $notification->channel) instanceof NotificationChannel ? $channel : NotificationChannel::from(empty($channel) ? NotificationChannel::EMAIL : $channel)),
             'subject' => $notification->subject,
             'content' => $notification->content,
             'status' => (string) $notification->status,

@@ -12,7 +12,7 @@ class ProductResourceCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'data' => ProductResource::collection($this->collection)->toArray($request)['data'],
+            'data' => $this->collection->map(fn ($item) => (new ProductResource($item))->toArray($request)),
             'meta' => [
                 'total' => $this->collection->count(),
             ],

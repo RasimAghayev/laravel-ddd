@@ -10,7 +10,7 @@ final class OrderData
 {
     public function __construct(
         public readonly ?string $id,
-        public readonly string $userId,
+        public readonly ?string $userId,
         public readonly int $totalCents,
         public readonly string $currency,
         public readonly OrderStatus $status,
@@ -20,8 +20,8 @@ final class OrderData
     {
         return new self(
             id: $data['id'] ?? null,
-            userId: $data['user_id'],
-            totalCents: (int) $data['total_cents'],
+            userId: isset($data['user_id']) ? (string) $data['user_id'] : null,
+            totalCents: (int) ($data['total_cents'] ?? 0),
             currency: $data['currency'] ?? 'USD',
             status: OrderStatus::from($data['status'] ?? OrderStatus::PENDING),
         );

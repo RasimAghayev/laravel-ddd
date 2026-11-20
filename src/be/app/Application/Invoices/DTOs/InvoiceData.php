@@ -10,7 +10,7 @@ final class InvoiceData
 {
     public function __construct(
         public readonly ?string $id,
-        public readonly string $orderId,
+        public readonly ?string $orderId,
         public readonly int $amountCents,
         public readonly string $currency,
         public readonly InvoiceStatus $status,
@@ -21,8 +21,8 @@ final class InvoiceData
     {
         return new self(
             id: $data['id'] ?? null,
-            orderId: $data['order_id'],
-            amountCents: (int) $data['amount_cents'],
+            orderId: isset($data['order_id']) ? (string) $data['order_id'] : null,
+            amountCents: (int) ($data['amount_cents'] ?? 0),
             currency: $data['currency'] ?? 'USD',
             status: InvoiceStatus::from($data['status'] ?? InvoiceStatus::DRAFT),
             dueAt: $data['due_at'] ?? null,

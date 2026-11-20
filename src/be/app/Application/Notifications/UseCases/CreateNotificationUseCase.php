@@ -17,12 +17,12 @@ class CreateNotificationUseCase
     public function execute(NotificationData $data): Notification
     {
         $notification = new Notification;
-        $notification->recipient_type = $data->recipientType;
-        $notification->recipient_id = $data->recipientId;
-        $notification->channel = $data->channel;
-        $notification->subject = $data->subject;
-        $notification->content = $data->content;
-        $notification->status = $data->status;
+        $notification->recipient_type = $data->recipientType ?? '';
+        $notification->recipient_id = $data->recipientId ?? '';
+        $notification->channel = (string) $data->channel;
+        $notification->subject = $data->subject ?? '';
+        $notification->content = $data->content ?? '';
+        $notification->status = (string) $data->status;
 
         $this->notificationRepository->save($notification);
 

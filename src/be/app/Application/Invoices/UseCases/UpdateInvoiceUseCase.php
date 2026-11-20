@@ -22,10 +22,12 @@ class UpdateInvoiceUseCase
             return null;
         }
 
-        $invoice->order_id = $data->orderId;
+        if ($data->orderId !== null) {
+            $invoice->order_id = $data->orderId;
+        }
         $invoice->amount_cents = $data->amountCents;
         $invoice->currency = $data->currency;
-        $invoice->status = $data->status;
+        $invoice->status = (string) $data->status;
         $invoice->due_at = $data->dueAt;
 
         $this->invoiceRepository->save($invoice);

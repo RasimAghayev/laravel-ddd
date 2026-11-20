@@ -22,11 +22,13 @@ class UpdatePaymentUseCase
             return null;
         }
 
-        $payment->order_id = $data->orderId;
+        if ($data->orderId !== null) {
+            $payment->order_id = $data->orderId;
+        }
         $payment->amount_cents = $data->amountCents;
         $payment->currency = $data->currency;
-        $payment->method = $data->method;
-        $payment->status = $data->status;
+        $payment->method = (string) $data->method;
+        $payment->status = (string) $data->status;
         $payment->transaction_reference = $data->transactionReference;
 
         $this->paymentRepository->save($payment);

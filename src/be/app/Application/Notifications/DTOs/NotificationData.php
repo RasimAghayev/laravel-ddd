@@ -10,11 +10,11 @@ final class NotificationData
 {
     public function __construct(
         public readonly ?string $id,
-        public readonly string $recipientType,
-        public readonly string $recipientId,
-        public readonly string $channel,
-        public readonly string $subject,
-        public readonly string $content,
+        public readonly ?string $recipientType,
+        public readonly ?string $recipientId,
+        public readonly ?string $channel,
+        public readonly ?string $subject,
+        public readonly ?string $content,
         public readonly NotificationStatus $status,
     ) {}
 
@@ -22,11 +22,11 @@ final class NotificationData
     {
         return new self(
             id: $data['id'] ?? null,
-            recipientType: $data['recipient_type'],
-            recipientId: $data['recipient_id'],
-            channel: $data['channel'],
-            subject: $data['subject'],
-            content: $data['content'],
+            recipientType: $data['recipient_type'] ?? null,
+            recipientId: $data['recipient_id'] ?? null,
+            channel: $data['channel'] ?? null,
+            subject: $data['subject'] ?? null,
+            content: $data['content'] ?? null,
             status: NotificationStatus::from($data['status'] ?? NotificationStatus::PENDING),
         );
     }
