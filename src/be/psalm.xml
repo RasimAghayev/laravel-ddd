@@ -1,29 +1,26 @@
 <?xml version="1.0"?>
 <psalm
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="https://getpsalm.org/psalm"
-    xsi:schemaLocation="https://getpsalm.org/psalm vendor/vimeo/psalm/psalm.xsd"
+    xmlns="https://getpsalm.org/schema/config"
     errorBaseline="psalm-baseline.xml"
-    resolveFromConfigPath="true"
+    resolveFromConfigFile="true"
 >
     <projectFiles>
         <directory name="app"/>
         <directory name="tests"/>
-        <ignore file="vendor"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+            <directory name="bootstrap/cache"/>
+            <directory name="storage/framework"/>
+            <directory name="database/migrations"/>
+            <directory name="database/factories"/>
+            <directory name="database/seeders"/>
+            <file name="routes/console.php"/>
+        </ignoreFiles>
     </projectFiles>
-    <plugins>
-        <plugin class="Psalm\LaravelPlugin\Plugin"/>
-    </plugins>
     <fileExtensions>
         <extension name="php"/>
     </fileExtensions>
-    <ignoreFiles>
-        <directory name="vendor"/>
-        <directory name="bootstrap/cache"/>
-        <directory name="storage/framework"/>
-        <directory name="database/migrations"/>
-        <directory name="database/factories"/>
-        <directory name="database/seeders"/>
-        <file>routes/console.php</file>
-    </ignoreFiles>
+    <plugins>
+        <plugin class="Psalm\LaravelPlugin\Plugin" filename="vendor/psalm/plugin-laravel/src/Plugin.php"/>
+    </plugins>
 </psalm>

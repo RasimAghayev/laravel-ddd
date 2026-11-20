@@ -1,8 +1,2025 @@
-<?xml version="1.0"?>
-<psalm
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="https://getpsalm.org/psalm"
-    xsi:schemaLocation="https://getpsalm.org/psalm vendor/vimeo/psalm/psalm.xsd"
-    totallyTyped="false"
->
-</psalm>
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="6.21.0@ef1458bf94f30be89ef01278265f846b254248cb">
+  <file src="app/App/Console/Commands/AppName.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$this->argument('name')]]></code>
+    </ArgumentTypeCoercion>
+    <ClassMustBeFinal>
+      <code><![CDATA[AppName]]></code>
+    </ClassMustBeFinal>
+    <InvalidOperand>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[str_replace('\\', '\\\\', $this->argument('name'))]]></code>
+    </InvalidOperand>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function getArguments()]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullArgument>
+      <code><![CDATA[$this->argument('name')]]></code>
+      <code><![CDATA[$this->argument('name')]]></code>
+    </PossiblyNullArgument>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[$currentRoot]]></code>
+      <code><![CDATA[AppName]]></code>
+      <code><![CDATA[AppName]]></code>
+      <code><![CDATA[AppName]]></code>
+      <code><![CDATA[AppName]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[$this->laravel]]></code>
+      <code><![CDATA[$this->laravel]]></code>
+    </UndefinedInterfaceMethod>
+    <UnusedClass>
+      <code><![CDATA[AppName]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/App/Providers/AppServiceProvider.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AppServiceProvider]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function register(): void]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[AppServiceProvider]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Application/AuditLog/DTOs/AuditLogData.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/AuditLog/UseCases/CreateAuditLogUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreateAuditLogUseCase]]></code>
+    </ClassMustBeFinal>
+    <InaccessibleProperty>
+      <code><![CDATA[$auditLog->changes]]></code>
+    </InaccessibleProperty>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$auditLog->action]]></code>
+      <code><![CDATA[$auditLog->actor_id]]></code>
+      <code><![CDATA[$auditLog->actor_type]]></code>
+      <code><![CDATA[$auditLog->subject_id]]></code>
+      <code><![CDATA[$auditLog->subject_type]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/AuditLog/UseCases/ListAuditLogsUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ListAuditLogsUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Cars/DTOs/CarData.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/Cars/UseCases/CreateCarUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreateCarUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$car->brand]]></code>
+      <code><![CDATA[$car->currency]]></code>
+      <code><![CDATA[$car->model]]></code>
+      <code><![CDATA[$car->price_cents]]></code>
+      <code><![CDATA[$car->status]]></code>
+      <code><![CDATA[$car->year]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Cars/UseCases/DeleteCarUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[DeleteCarUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Cars/UseCases/GetCarUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[GetCarUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Cars/UseCases/ListCarsUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ListCarsUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Cars/UseCases/UpdateCarUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateCarUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$car->brand]]></code>
+      <code><![CDATA[$car->currency]]></code>
+      <code><![CDATA[$car->model]]></code>
+      <code><![CDATA[$car->price_cents]]></code>
+      <code><![CDATA[$car->status]]></code>
+      <code><![CDATA[$car->year]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Invoices/DTOs/InvoiceData.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/Invoices/UseCases/CreateInvoiceUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreateInvoiceUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$invoice->amount_cents]]></code>
+      <code><![CDATA[$invoice->currency]]></code>
+      <code><![CDATA[$invoice->due_at]]></code>
+      <code><![CDATA[$invoice->order_id]]></code>
+      <code><![CDATA[$invoice->status]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Invoices/UseCases/DeleteInvoiceUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[DeleteInvoiceUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Invoices/UseCases/GetInvoiceUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[GetInvoiceUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Invoices/UseCases/ListInvoicesUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ListInvoicesUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Invoices/UseCases/UpdateInvoiceUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateInvoiceUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$invoice->amount_cents]]></code>
+      <code><![CDATA[$invoice->currency]]></code>
+      <code><![CDATA[$invoice->due_at]]></code>
+      <code><![CDATA[$invoice->order_id]]></code>
+      <code><![CDATA[$invoice->status]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Notifications/DTOs/NotificationData.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/Notifications/UseCases/CreateNotificationUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreateNotificationUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$notification->channel]]></code>
+      <code><![CDATA[$notification->content]]></code>
+      <code><![CDATA[$notification->recipient_id]]></code>
+      <code><![CDATA[$notification->recipient_type]]></code>
+      <code><![CDATA[$notification->status]]></code>
+      <code><![CDATA[$notification->subject]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Notifications/UseCases/DeleteNotificationUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[DeleteNotificationUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Notifications/UseCases/GetNotificationUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[GetNotificationUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Notifications/UseCases/ListNotificationsUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ListNotificationsUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Notifications/UseCases/UpdateNotificationUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateNotificationUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$notification->channel]]></code>
+      <code><![CDATA[$notification->content]]></code>
+      <code><![CDATA[$notification->recipient_id]]></code>
+      <code><![CDATA[$notification->recipient_type]]></code>
+      <code><![CDATA[$notification->status]]></code>
+      <code><![CDATA[$notification->subject]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Orders/DTOs/OrderData.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/Orders/UseCases/CreateOrderUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreateOrderUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$order->currency]]></code>
+      <code><![CDATA[$order->status]]></code>
+      <code><![CDATA[$order->total_cents]]></code>
+      <code><![CDATA[$order->user_id]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Orders/UseCases/DeleteOrderUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[DeleteOrderUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Orders/UseCases/GetOrderUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[GetOrderUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Orders/UseCases/ListOrdersUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ListOrdersUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Orders/UseCases/UpdateOrderUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateOrderUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$order->currency]]></code>
+      <code><![CDATA[$order->status]]></code>
+      <code><![CDATA[$order->total_cents]]></code>
+      <code><![CDATA[$order->user_id]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Payments/DTOs/PaymentData.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/Payments/UseCases/CreatePaymentUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreatePaymentUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$payment->amount_cents]]></code>
+      <code><![CDATA[$payment->currency]]></code>
+      <code><![CDATA[$payment->method]]></code>
+      <code><![CDATA[$payment->order_id]]></code>
+      <code><![CDATA[$payment->status]]></code>
+      <code><![CDATA[$payment->transaction_reference]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Payments/UseCases/DeletePaymentUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[DeletePaymentUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Payments/UseCases/GetPaymentUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[GetPaymentUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Payments/UseCases/ListPaymentsUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ListPaymentsUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Payments/UseCases/UpdatePaymentUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdatePaymentUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$payment->amount_cents]]></code>
+      <code><![CDATA[$payment->currency]]></code>
+      <code><![CDATA[$payment->method]]></code>
+      <code><![CDATA[$payment->order_id]]></code>
+      <code><![CDATA[$payment->status]]></code>
+      <code><![CDATA[$payment->transaction_reference]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Products/DTOs/ProductData.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/Products/UseCases/CreateProductUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreateProductUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$product->currency]]></code>
+      <code><![CDATA[$product->description]]></code>
+      <code><![CDATA[$product->name]]></code>
+      <code><![CDATA[$product->price_cents]]></code>
+      <code><![CDATA[$product->sku]]></code>
+      <code><![CDATA[$product->status]]></code>
+      <code><![CDATA[$product->stock_quantity]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Products/UseCases/DeleteProductUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[DeleteProductUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Products/UseCases/GetProductUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[GetProductUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Products/UseCases/ListProductsUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ListProductsUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Products/UseCases/UpdateProductUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateProductUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$product->currency]]></code>
+      <code><![CDATA[$product->description]]></code>
+      <code><![CDATA[$product->name]]></code>
+      <code><![CDATA[$product->price_cents]]></code>
+      <code><![CDATA[$product->sku]]></code>
+      <code><![CDATA[$product->status]]></code>
+      <code><![CDATA[$product->stock_quantity]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Users/DTOs/UserData.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/Users/UseCases/CreateUserUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreateUserUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$user->email]]></code>
+      <code><![CDATA[$user->name]]></code>
+      <code><![CDATA[$user->password]]></code>
+      <code><![CDATA[$user->role]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Application/Users/UseCases/DeleteUserUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[DeleteUserUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Users/UseCases/GetUserUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[GetUserUseCase]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[byEmail]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Application/Users/UseCases/ListUsersUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ListUsersUseCase]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="app/Application/Users/UseCases/UpdateUserUseCase.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateUserUseCase]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$user->email]]></code>
+      <code><![CDATA[$user->name]]></code>
+      <code><![CDATA[$user->password]]></code>
+      <code><![CDATA[$user->role]]></code>
+    </UndefinedMagicPropertyAssignment>
+  </file>
+  <file src="app/Domain/AuditLog/AuditLog.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AuditLog]]></code>
+    </ClassMustBeFinal>
+    <DocblockTypeContradiction>
+      <code><![CDATA[[]]]></code>
+    </DocblockTypeContradiction>
+    <MissingTemplateParam>
+      <code><![CDATA[HasFactory]]></code>
+    </MissingTemplateParam>
+    <RedundantConditionGivenDocblockType>
+      <code><![CDATA[$this->changes]]></code>
+    </RedundantConditionGivenDocblockType>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->action]]></code>
+      <code><![CDATA[$this->actor_id]]></code>
+      <code><![CDATA[$this->actor_type]]></code>
+      <code><![CDATA[$this->subject_id]]></code>
+      <code><![CDATA[$this->subject_type]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="app/Domain/AuditLog/Repository/AuditLogRepositoryInterface.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[findByActor]]></code>
+      <code><![CDATA[findById]]></code>
+      <code><![CDATA[findBySubject]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Cars/Car.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Car]]></code>
+    </ClassMustBeFinal>
+    <MissingTemplateParam>
+      <code><![CDATA[HasFactory]]></code>
+    </MissingTemplateParam>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[activate]]></code>
+      <code><![CDATA[brand]]></code>
+      <code><![CDATA[maintenance]]></code>
+      <code><![CDATA[model]]></code>
+      <code><![CDATA[status]]></code>
+      <code><![CDATA[year]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+    </UndefinedThisPropertyAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->brand]]></code>
+      <code><![CDATA[$this->currency]]></code>
+      <code><![CDATA[$this->model]]></code>
+      <code><![CDATA[$this->price_cents]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->year]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="app/Domain/Cars/Repository/CarRepositoryInterface.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[count]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Cars/ValueObjects/CarStatus.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[isActive]]></code>
+      <code><![CDATA[isSold]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Cars/ValueObjects/Price.php">
+    <InvalidOperand>
+      <code><![CDATA[(float) $decimal * 100]]></code>
+    </InvalidOperand>
+  </file>
+  <file src="app/Domain/Invoices/Invoice.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Invoice]]></code>
+    </ClassMustBeFinal>
+    <MissingTemplateParam>
+      <code><![CDATA[HasFactory]]></code>
+    </MissingTemplateParam>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[order]]></code>
+      <code><![CDATA[overdue]]></code>
+      <code><![CDATA[status]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+    </UndefinedThisPropertyAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->amount_cents]]></code>
+      <code><![CDATA[$this->currency]]></code>
+      <code><![CDATA[$this->due_at]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="app/Domain/Invoices/Repository/InvoiceRepositoryInterface.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[findByOrderId]]></code>
+      <code><![CDATA[findByStatus]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedClass>
+      <code><![CDATA[InvoiceStatus]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="app/Domain/Invoices/ValueObjects/InvoiceStatus.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[isIssued]]></code>
+      <code><![CDATA[isOverdue]]></code>
+      <code><![CDATA[isPaid]]></code>
+      <code><![CDATA[isVoid]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Notifications/Notification.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Notification]]></code>
+    </ClassMustBeFinal>
+    <MissingTemplateParam>
+      <code><![CDATA[HasFactory]]></code>
+    </MissingTemplateParam>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[status]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->sent_at]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+    </UndefinedThisPropertyAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->channel]]></code>
+      <code><![CDATA[$this->recipient_type]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="app/Domain/Notifications/Repository/NotificationRepositoryInterface.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[findByRecipient]]></code>
+      <code><![CDATA[findByStatus]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedClass>
+      <code><![CDATA[NotificationStatus]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="app/Domain/Notifications/ValueObjects/NotificationStatus.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[isFailed]]></code>
+      <code><![CDATA[isPending]]></code>
+      <code><![CDATA[isRead]]></code>
+      <code><![CDATA[isSent]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Orders/Order.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Order]]></code>
+    </ClassMustBeFinal>
+    <MissingTemplateParam>
+      <code><![CDATA[HasFactory]]></code>
+    </MissingTemplateParam>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[status]]></code>
+      <code><![CDATA[user]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+    </UndefinedThisPropertyAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->currency]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->total_cents]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="app/Domain/Orders/Repository/OrderRepositoryInterface.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[findByUserId]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Orders/ValueObjects/OrderStatus.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[isCancelled]]></code>
+      <code><![CDATA[isConfirmed]]></code>
+      <code><![CDATA[isDelivered]]></code>
+      <code><![CDATA[isPending]]></code>
+      <code><![CDATA[isShipped]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Payments/Payment.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Payment]]></code>
+    </ClassMustBeFinal>
+    <MissingTemplateParam>
+      <code><![CDATA[HasFactory]]></code>
+    </MissingTemplateParam>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[order]]></code>
+      <code><![CDATA[status]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->paid_at]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->transaction_reference]]></code>
+    </UndefinedThisPropertyAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->amount_cents]]></code>
+      <code><![CDATA[$this->currency]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->transaction_reference]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="app/Domain/Payments/Repository/PaymentRepositoryInterface.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[findByOrderId]]></code>
+      <code><![CDATA[findByStatus]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedClass>
+      <code><![CDATA[PaymentStatus]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="app/Domain/Payments/ValueObjects/PaymentStatus.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[isCancelled]]></code>
+      <code><![CDATA[isFailed]]></code>
+      <code><![CDATA[isPaid]]></code>
+      <code><![CDATA[isPending]]></code>
+      <code><![CDATA[isRefunded]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Products/Product.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Product]]></code>
+    </ClassMustBeFinal>
+    <MissingTemplateParam>
+      <code><![CDATA[HasFactory]]></code>
+    </MissingTemplateParam>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[activate]]></code>
+      <code><![CDATA[status]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+    </UndefinedThisPropertyAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->currency]]></code>
+      <code><![CDATA[$this->price_cents]]></code>
+      <code><![CDATA[$this->status]]></code>
+      <code><![CDATA[$this->status]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="app/Domain/Products/Repository/ProductRepositoryInterface.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[count]]></code>
+      <code><![CDATA[findActive]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Products/ValueObjects/ProductStatus.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[isActive]]></code>
+      <code><![CDATA[isArchived]]></code>
+      <code><![CDATA[isInactive]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Users/Repository/UserRepositoryInterface.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[count]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Domain/Users/User.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[User]]></code>
+    </ClassMustBeFinal>
+    <MissingTemplateParam>
+      <code><![CDATA[HasFactory]]></code>
+    </MissingTemplateParam>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[role]]></code>
+    </PossiblyUnusedMethod>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->role]]></code>
+      <code><![CDATA[$this->role]]></code>
+    </UndefinedThisPropertyAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->email]]></code>
+      <code><![CDATA[$this->role]]></code>
+      <code><![CDATA[$this->role]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="app/Domain/Users/ValueObjects/UserRole.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[isAdmin]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="app/Http/Controllers/API/AuditLogController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AuditLogController]]></code>
+    </ClassMustBeFinal>
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+    <RiskyCast>
+      <code><![CDATA[$request->query('page', 1)]]></code>
+      <code><![CDATA[$request->query('per_page', 15)]]></code>
+    </RiskyCast>
+    <UnusedClass>
+      <code><![CDATA[AuditLogController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Controllers/API/CarController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CarController]]></code>
+    </ClassMustBeFinal>
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+    <RiskyCast>
+      <code><![CDATA[$request->query('page', 1)]]></code>
+      <code><![CDATA[$request->query('per_page', 15)]]></code>
+    </RiskyCast>
+    <UnusedClass>
+      <code><![CDATA[CarController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Controllers/API/InvoiceController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvoiceController]]></code>
+    </ClassMustBeFinal>
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+    <RiskyCast>
+      <code><![CDATA[$request->query('page', 1)]]></code>
+      <code><![CDATA[$request->query('per_page', 15)]]></code>
+    </RiskyCast>
+    <UnusedClass>
+      <code><![CDATA[InvoiceController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Controllers/API/NotificationController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[NotificationController]]></code>
+    </ClassMustBeFinal>
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+    <RiskyCast>
+      <code><![CDATA[$request->query('page', 1)]]></code>
+      <code><![CDATA[$request->query('per_page', 15)]]></code>
+    </RiskyCast>
+    <UnusedClass>
+      <code><![CDATA[NotificationController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Controllers/API/OrderController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[OrderController]]></code>
+    </ClassMustBeFinal>
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+    <RiskyCast>
+      <code><![CDATA[$request->query('page', 1)]]></code>
+      <code><![CDATA[$request->query('per_page', 15)]]></code>
+    </RiskyCast>
+    <UnusedClass>
+      <code><![CDATA[OrderController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Controllers/API/PaymentController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[PaymentController]]></code>
+    </ClassMustBeFinal>
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+    <RiskyCast>
+      <code><![CDATA[$request->query('page', 1)]]></code>
+      <code><![CDATA[$request->query('per_page', 15)]]></code>
+    </RiskyCast>
+    <UnusedClass>
+      <code><![CDATA[PaymentController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Controllers/API/ProductController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ProductController]]></code>
+    </ClassMustBeFinal>
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+    <RiskyCast>
+      <code><![CDATA[$request->query('page', 1)]]></code>
+      <code><![CDATA[$request->query('per_page', 15)]]></code>
+    </RiskyCast>
+    <UnusedClass>
+      <code><![CDATA[ProductController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Controllers/API/UserController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UserController]]></code>
+    </ClassMustBeFinal>
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+    <RiskyCast>
+      <code><![CDATA[$request->query('page', 1)]]></code>
+      <code><![CDATA[$request->query('per_page', 15)]]></code>
+    </RiskyCast>
+    <UnusedClass>
+      <code><![CDATA[UserController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Requests/StoreAuditLogRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+      <code><![CDATA[StoreAuditLogRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/StoreCarRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[StoreCarRequest]]></code>
+    </ClassMustBeFinal>
+    <InvalidOperand>
+      <code><![CDATA[date('Y') + 1]]></code>
+      <code><![CDATA[date('Y') + 1]]></code>
+    </InvalidOperand>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function messages(): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[StoreCarRequest]]></code>
+      <code><![CDATA[StoreCarRequest]]></code>
+      <code><![CDATA[StoreCarRequest]]></code>
+      <code><![CDATA[StoreCarRequest]]></code>
+      <code><![CDATA[StoreCarRequest]]></code>
+      <code><![CDATA[StoreCarRequest]]></code>
+      <code><![CDATA[StoreCarRequest]]></code>
+      <code><![CDATA[StoreCarRequest]]></code>
+      <code><![CDATA[StoreCarRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/StoreInvoiceRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function messages(): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+      <code><![CDATA[StoreInvoiceRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/StoreNotificationRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function messages(): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+      <code><![CDATA[StoreNotificationRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/StoreOrderRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[StoreOrderRequest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function messages(): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[StoreOrderRequest]]></code>
+      <code><![CDATA[StoreOrderRequest]]></code>
+      <code><![CDATA[StoreOrderRequest]]></code>
+      <code><![CDATA[StoreOrderRequest]]></code>
+      <code><![CDATA[StoreOrderRequest]]></code>
+      <code><![CDATA[StoreOrderRequest]]></code>
+      <code><![CDATA[StoreOrderRequest]]></code>
+      <code><![CDATA[StoreOrderRequest]]></code>
+      <code><![CDATA[StoreOrderRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/StorePaymentRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[StorePaymentRequest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function messages(): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[StorePaymentRequest]]></code>
+      <code><![CDATA[StorePaymentRequest]]></code>
+      <code><![CDATA[StorePaymentRequest]]></code>
+      <code><![CDATA[StorePaymentRequest]]></code>
+      <code><![CDATA[StorePaymentRequest]]></code>
+      <code><![CDATA[StorePaymentRequest]]></code>
+      <code><![CDATA[StorePaymentRequest]]></code>
+      <code><![CDATA[StorePaymentRequest]]></code>
+      <code><![CDATA[StorePaymentRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/StoreProductRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[StoreProductRequest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function messages(): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[StoreProductRequest]]></code>
+      <code><![CDATA[StoreProductRequest]]></code>
+      <code><![CDATA[StoreProductRequest]]></code>
+      <code><![CDATA[StoreProductRequest]]></code>
+      <code><![CDATA[StoreProductRequest]]></code>
+      <code><![CDATA[StoreProductRequest]]></code>
+      <code><![CDATA[StoreProductRequest]]></code>
+      <code><![CDATA[StoreProductRequest]]></code>
+      <code><![CDATA[StoreProductRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/StoreUserRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[StoreUserRequest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[StoreUserRequest]]></code>
+      <code><![CDATA[StoreUserRequest]]></code>
+      <code><![CDATA[StoreUserRequest]]></code>
+      <code><![CDATA[StoreUserRequest]]></code>
+      <code><![CDATA[StoreUserRequest]]></code>
+      <code><![CDATA[StoreUserRequest]]></code>
+      <code><![CDATA[StoreUserRequest]]></code>
+      <code><![CDATA[StoreUserRequest]]></code>
+      <code><![CDATA[StoreUserRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/UpdateAuditLogRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+    </ClassMustBeFinal>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+    </PropertyNotSetInConstructor>
+    <UnusedClass>
+      <code><![CDATA[UpdateAuditLogRequest]]></code>
+    </UnusedClass>
+  </file>
+  <file src="app/Http/Requests/UpdateCarRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateCarRequest]]></code>
+    </ClassMustBeFinal>
+    <InvalidOperand>
+      <code><![CDATA[date('Y') + 1]]></code>
+      <code><![CDATA[date('Y') + 1]]></code>
+    </InvalidOperand>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UpdateCarRequest]]></code>
+      <code><![CDATA[UpdateCarRequest]]></code>
+      <code><![CDATA[UpdateCarRequest]]></code>
+      <code><![CDATA[UpdateCarRequest]]></code>
+      <code><![CDATA[UpdateCarRequest]]></code>
+      <code><![CDATA[UpdateCarRequest]]></code>
+      <code><![CDATA[UpdateCarRequest]]></code>
+      <code><![CDATA[UpdateCarRequest]]></code>
+      <code><![CDATA[UpdateCarRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/UpdateInvoiceRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+      <code><![CDATA[UpdateInvoiceRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/UpdateNotificationRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+      <code><![CDATA[UpdateNotificationRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/UpdateOrderRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+      <code><![CDATA[UpdateOrderRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/UpdatePaymentRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+      <code><![CDATA[UpdatePaymentRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/UpdateProductRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateProductRequest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyInvalidOperand>
+      <code><![CDATA[$this->route('product')]]></code>
+    </PossiblyInvalidOperand>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UpdateProductRequest]]></code>
+      <code><![CDATA[UpdateProductRequest]]></code>
+      <code><![CDATA[UpdateProductRequest]]></code>
+      <code><![CDATA[UpdateProductRequest]]></code>
+      <code><![CDATA[UpdateProductRequest]]></code>
+      <code><![CDATA[UpdateProductRequest]]></code>
+      <code><![CDATA[UpdateProductRequest]]></code>
+      <code><![CDATA[UpdateProductRequest]]></code>
+      <code><![CDATA[UpdateProductRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Requests/UpdateUserRequest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateUserRequest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[authorize]]></code>
+      <code><![CDATA[rules]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UpdateUserRequest]]></code>
+      <code><![CDATA[UpdateUserRequest]]></code>
+      <code><![CDATA[UpdateUserRequest]]></code>
+      <code><![CDATA[UpdateUserRequest]]></code>
+      <code><![CDATA[UpdateUserRequest]]></code>
+      <code><![CDATA[UpdateUserRequest]]></code>
+      <code><![CDATA[UpdateUserRequest]]></code>
+      <code><![CDATA[UpdateUserRequest]]></code>
+      <code><![CDATA[UpdateUserRequest]]></code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="app/Http/Resources/AuditLogResource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AuditLogResource]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$log->created_at]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="app/Http/Resources/AuditLogResourceCollection.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AuditLogResourceCollection]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullReference>
+      <code><![CDATA[count]]></code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[AuditLogResourceCollection]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[AuditLogResource::collection($this->collection)->toArray($request)]]></code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="app/Http/Resources/CarResource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CarResource]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$car->brand]]></code>
+      <code><![CDATA[$car->created_at]]></code>
+      <code><![CDATA[$car->currency]]></code>
+      <code><![CDATA[$car->model]]></code>
+      <code><![CDATA[$car->price_cents]]></code>
+      <code><![CDATA[$car->status]]></code>
+      <code><![CDATA[$car->updated_at]]></code>
+      <code><![CDATA[$car->year]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="app/Http/Resources/CarResourceCollection.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CarResourceCollection]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullReference>
+      <code><![CDATA[count]]></code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[CarResourceCollection]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[CarResource::collection($this->collection)->toArray($request)]]></code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="app/Http/Resources/InvoiceResource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvoiceResource]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$invoice->amount_cents]]></code>
+      <code><![CDATA[$invoice->created_at]]></code>
+      <code><![CDATA[$invoice->currency]]></code>
+      <code><![CDATA[$invoice->due_at]]></code>
+      <code><![CDATA[$invoice->order_id]]></code>
+      <code><![CDATA[$invoice->status]]></code>
+      <code><![CDATA[$invoice->updated_at]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="app/Http/Resources/InvoiceResourceCollection.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvoiceResourceCollection]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullReference>
+      <code><![CDATA[count]]></code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[InvoiceResourceCollection]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[InvoiceResource::collection($this->collection)->toArray($request)]]></code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="app/Http/Resources/NotificationResource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[NotificationResource]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$notification->content]]></code>
+      <code><![CDATA[$notification->created_at]]></code>
+      <code><![CDATA[$notification->recipient_id]]></code>
+      <code><![CDATA[$notification->sent_at]]></code>
+      <code><![CDATA[$notification->status]]></code>
+      <code><![CDATA[$notification->subject]]></code>
+      <code><![CDATA[$notification->updated_at]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="app/Http/Resources/NotificationResourceCollection.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[NotificationResourceCollection]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullReference>
+      <code><![CDATA[count]]></code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[NotificationResourceCollection]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[NotificationResource::collection($this->collection)->toArray($request)]]></code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="app/Http/Resources/OrderResource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[OrderResource]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$order->created_at]]></code>
+      <code><![CDATA[$order->currency]]></code>
+      <code><![CDATA[$order->status]]></code>
+      <code><![CDATA[$order->total_cents]]></code>
+      <code><![CDATA[$order->updated_at]]></code>
+      <code><![CDATA[$order->user_id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="app/Http/Resources/OrderResourceCollection.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[OrderResourceCollection]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullReference>
+      <code><![CDATA[count]]></code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[OrderResourceCollection]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[OrderResource::collection($this->collection)->toArray($request)]]></code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="app/Http/Resources/PaymentResource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[PaymentResource]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$payment->amount_cents]]></code>
+      <code><![CDATA[$payment->created_at]]></code>
+      <code><![CDATA[$payment->currency]]></code>
+      <code><![CDATA[$payment->method]]></code>
+      <code><![CDATA[$payment->order_id]]></code>
+      <code><![CDATA[$payment->paid_at]]></code>
+      <code><![CDATA[$payment->status]]></code>
+      <code><![CDATA[$payment->updated_at]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="app/Http/Resources/PaymentResourceCollection.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[PaymentResourceCollection]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullReference>
+      <code><![CDATA[count]]></code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[PaymentResourceCollection]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[PaymentResource::collection($this->collection)->toArray($request)]]></code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="app/Http/Resources/ProductResource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ProductResource]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$product->created_at]]></code>
+      <code><![CDATA[$product->currency]]></code>
+      <code><![CDATA[$product->description]]></code>
+      <code><![CDATA[$product->name]]></code>
+      <code><![CDATA[$product->price_cents]]></code>
+      <code><![CDATA[$product->status]]></code>
+      <code><![CDATA[$product->stock_quantity]]></code>
+      <code><![CDATA[$product->updated_at]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="app/Http/Resources/ProductResourceCollection.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ProductResourceCollection]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullReference>
+      <code><![CDATA[count]]></code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[ProductResourceCollection]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[ProductResource::collection($this->collection)->toArray($request)]]></code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="app/Http/Resources/UserResource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UserResource]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$user->created_at]]></code>
+      <code><![CDATA[$user->email_verified_at]]></code>
+      <code><![CDATA[$user->name]]></code>
+      <code><![CDATA[$user->role]]></code>
+      <code><![CDATA[$user->updated_at]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="app/Http/Resources/UserResourceCollection.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UserResourceCollection]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toArray(Request $request): array]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyNullReference>
+      <code><![CDATA[count]]></code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UserResourceCollection]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[UserResource::collection($this->collection)->toArray($request)]]></code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="app/Infrastructure/Persistence/Eloquent/AuditLog/EloquentAuditLogRepository.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[EloquentAuditLogRepository]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function findAll(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findByActor(string $actorId, ?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findById(string $id): ?AuditLog]]></code>
+      <code><![CDATA[public function findBySubject(string $subjectType, string $subjectId, ?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function save(AuditLog $auditLog): void]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicMethod>
+      <code><![CDATA[AuditLog::count()]]></code>
+      <code><![CDATA[AuditLog::find($id)]]></code>
+      <code><![CDATA[AuditLog::where('actor_id', $actorId)]]></code>
+      <code><![CDATA[AuditLog::where('subject_type', $subjectType)]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="app/Infrastructure/Persistence/Eloquent/Cars/EloquentCarRepository.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[EloquentCarRepository]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function delete(Car $car): void]]></code>
+      <code><![CDATA[public function findAll(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findById(string $id): ?Car]]></code>
+      <code><![CDATA[public function save(Car $car): void]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicMethod>
+      <code><![CDATA[Car::count()]]></code>
+      <code><![CDATA[Car::find($id)]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="app/Infrastructure/Persistence/Eloquent/Invoices/EloquentInvoiceRepository.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[EloquentInvoiceRepository]]></code>
+    </ClassMustBeFinal>
+    <ImplementedParamTypeMismatch>
+      <code><![CDATA[$status]]></code>
+    </ImplementedParamTypeMismatch>
+    <MethodSignatureMismatch>
+      <code><![CDATA[$status]]></code>
+    </MethodSignatureMismatch>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function delete(Invoice $invoice): void]]></code>
+      <code><![CDATA[public function findAll(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findById(string $id): ?Invoice]]></code>
+      <code><![CDATA[public function findByOrderId(string $orderId): ?Invoice]]></code>
+      <code><![CDATA[public function findByStatus(InvoiceStatus $status, ?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function save(Invoice $invoice): void]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicMethod>
+      <code><![CDATA[Invoice::count()]]></code>
+      <code><![CDATA[Invoice::find($id)]]></code>
+      <code><![CDATA[Invoice::where('order_id', $orderId)]]></code>
+      <code><![CDATA[Invoice::where('status', $status->value)]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="app/Infrastructure/Persistence/Eloquent/Notifications/EloquentNotificationRepository.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[EloquentNotificationRepository]]></code>
+    </ClassMustBeFinal>
+    <ImplementedParamTypeMismatch>
+      <code><![CDATA[$status]]></code>
+    </ImplementedParamTypeMismatch>
+    <MethodSignatureMismatch>
+      <code><![CDATA[$status]]></code>
+    </MethodSignatureMismatch>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function delete(Notification $notification): void]]></code>
+      <code><![CDATA[public function findAll(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findById(string $id): ?Notification]]></code>
+      <code><![CDATA[public function findByRecipient(string $recipientType, string $recipientId, ?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findByStatus(NotificationStatus $status, ?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function save(Notification $notification): void]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicMethod>
+      <code><![CDATA[Notification::count()]]></code>
+      <code><![CDATA[Notification::find($id)]]></code>
+      <code><![CDATA[Notification::where('recipient_type', $recipientType)]]></code>
+      <code><![CDATA[Notification::where('status', $status->value)]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="app/Infrastructure/Persistence/Eloquent/Orders/EloquentOrderRepository.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[EloquentOrderRepository]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function delete(Order $order): void]]></code>
+      <code><![CDATA[public function findAll(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findById(string $id): ?Order]]></code>
+      <code><![CDATA[public function findByUserId(string $userId, ?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function save(Order $order): void]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicMethod>
+      <code><![CDATA[Order::count()]]></code>
+      <code><![CDATA[Order::find($id)]]></code>
+      <code><![CDATA[Order::where('user_id', $userId)]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="app/Infrastructure/Persistence/Eloquent/Payments/EloquentPaymentRepository.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[EloquentPaymentRepository]]></code>
+    </ClassMustBeFinal>
+    <ImplementedParamTypeMismatch>
+      <code><![CDATA[$status]]></code>
+    </ImplementedParamTypeMismatch>
+    <MethodSignatureMismatch>
+      <code><![CDATA[$status]]></code>
+    </MethodSignatureMismatch>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function delete(Payment $payment): void]]></code>
+      <code><![CDATA[public function findAll(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findById(string $id): ?Payment]]></code>
+      <code><![CDATA[public function findByOrderId(string $orderId): array]]></code>
+      <code><![CDATA[public function findByStatus(PaymentStatus $status, ?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function save(Payment $payment): void]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicMethod>
+      <code><![CDATA[Payment::count()]]></code>
+      <code><![CDATA[Payment::find($id)]]></code>
+      <code><![CDATA[Payment::where('order_id', $orderId)]]></code>
+      <code><![CDATA[Payment::where('status', $status->value)]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="app/Infrastructure/Persistence/Eloquent/Products/EloquentProductRepository.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[EloquentProductRepository]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function delete(Product $product): void]]></code>
+      <code><![CDATA[public function findActive(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findAll(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findById(string $id): ?Product]]></code>
+      <code><![CDATA[public function save(Product $product): void]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicMethod>
+      <code><![CDATA[Product::count()]]></code>
+      <code><![CDATA[Product::find($id)]]></code>
+      <code><![CDATA[Product::where('status', 'active')]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="app/Infrastructure/Persistence/Eloquent/Users/EloquentUserRepository.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[EloquentUserRepository]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function delete(User $user): void]]></code>
+      <code><![CDATA[public function findAll(?Pagination $pagination = null): array]]></code>
+      <code><![CDATA[public function findByEmail(string $email): ?User]]></code>
+      <code><![CDATA[public function findById(string $id): ?User]]></code>
+      <code><![CDATA[public function save(User $user): void]]></code>
+    </MissingOverrideAttribute>
+    <UndefinedMagicMethod>
+      <code><![CDATA[User::count()]]></code>
+      <code><![CDATA[User::find($id)]]></code>
+      <code><![CDATA[User::where('email', $email)]]></code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="app/Providers/RepositoryServiceProvider.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RepositoryServiceProvider]]></code>
+    </ClassMustBeFinal>
+    <MissingClosureParamType>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+      <code><![CDATA[$app]]></code>
+    </MissingClosureParamType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function register(): void]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[RepositoryServiceProvider]]></code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Feature/AuditLog/AuditLogApiTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AuditLogApiTest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[test_can_create_audit_log]]></code>
+      <code><![CDATA[test_can_list_audit_logs]]></code>
+      <code><![CDATA[test_can_show_audit_log]]></code>
+      <code><![CDATA[test_returns_404_for_missing_audit_log]]></code>
+      <code><![CDATA[test_validation_requires_action]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[AuditLogApiTest]]></code>
+      <code><![CDATA[AuditLogApiTest]]></code>
+      <code><![CDATA[AuditLogApiTest]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$log->id]]></code>
+      <code><![CDATA[$log->id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="tests/Feature/Cars/CarApiTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CarApiTest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[test_can_create_car]]></code>
+      <code><![CDATA[test_can_delete_car]]></code>
+      <code><![CDATA[test_can_list_cars]]></code>
+      <code><![CDATA[test_can_show_car]]></code>
+      <code><![CDATA[test_can_update_car]]></code>
+      <code><![CDATA[test_returns_404_for_missing_car]]></code>
+      <code><![CDATA[test_validation_requires_brand_and_model]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[CarApiTest]]></code>
+      <code><![CDATA[CarApiTest]]></code>
+      <code><![CDATA[CarApiTest]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$car->id]]></code>
+      <code><![CDATA[$car->id]]></code>
+      <code><![CDATA[$car->id]]></code>
+      <code><![CDATA[$car->id]]></code>
+      <code><![CDATA[$car->id]]></code>
+      <code><![CDATA[$car->id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="tests/Feature/Invoices/InvoiceApiTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvoiceApiTest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[test_can_create_invoice]]></code>
+      <code><![CDATA[test_can_delete_invoice]]></code>
+      <code><![CDATA[test_can_list_invoices]]></code>
+      <code><![CDATA[test_can_show_invoice]]></code>
+      <code><![CDATA[test_can_update_invoice]]></code>
+      <code><![CDATA[test_returns_404_for_missing_invoice]]></code>
+      <code><![CDATA[test_validation_requires_order_id_and_amount_cents]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[InvoiceApiTest]]></code>
+      <code><![CDATA[InvoiceApiTest]]></code>
+      <code><![CDATA[InvoiceApiTest]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$invoice->id]]></code>
+      <code><![CDATA[$invoice->id]]></code>
+      <code><![CDATA[$invoice->id]]></code>
+      <code><![CDATA[$invoice->id]]></code>
+      <code><![CDATA[$invoice->id]]></code>
+      <code><![CDATA[$invoice->id]]></code>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$order->id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="tests/Feature/Notifications/NotificationApiTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[NotificationApiTest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[test_can_create_notification]]></code>
+      <code><![CDATA[test_can_delete_notification]]></code>
+      <code><![CDATA[test_can_list_notifications]]></code>
+      <code><![CDATA[test_can_show_notification]]></code>
+      <code><![CDATA[test_can_update_notification]]></code>
+      <code><![CDATA[test_returns_404_for_missing_notification]]></code>
+      <code><![CDATA[test_validation_requires_recipient_and_subject]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[NotificationApiTest]]></code>
+      <code><![CDATA[NotificationApiTest]]></code>
+      <code><![CDATA[NotificationApiTest]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$notification->id]]></code>
+      <code><![CDATA[$notification->id]]></code>
+      <code><![CDATA[$notification->id]]></code>
+      <code><![CDATA[$notification->id]]></code>
+      <code><![CDATA[$notification->id]]></code>
+      <code><![CDATA[$notification->id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="tests/Feature/Orders/OrderApiTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[OrderApiTest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[test_can_create_order]]></code>
+      <code><![CDATA[test_can_delete_order]]></code>
+      <code><![CDATA[test_can_list_orders]]></code>
+      <code><![CDATA[test_can_show_order]]></code>
+      <code><![CDATA[test_can_update_order]]></code>
+      <code><![CDATA[test_returns_404_for_missing_order]]></code>
+      <code><![CDATA[test_validation_requires_user_id_and_total_cents]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[OrderApiTest]]></code>
+      <code><![CDATA[OrderApiTest]]></code>
+      <code><![CDATA[OrderApiTest]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$user->id]]></code>
+      <code><![CDATA[$user->id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="tests/Feature/Payments/PaymentApiTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[PaymentApiTest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[test_can_create_payment]]></code>
+      <code><![CDATA[test_can_delete_payment]]></code>
+      <code><![CDATA[test_can_list_payments]]></code>
+      <code><![CDATA[test_can_show_payment]]></code>
+      <code><![CDATA[test_can_update_payment]]></code>
+      <code><![CDATA[test_returns_404_for_missing_payment]]></code>
+      <code><![CDATA[test_validation_requires_order_id_and_amount_cents]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[PaymentApiTest]]></code>
+      <code><![CDATA[PaymentApiTest]]></code>
+      <code><![CDATA[PaymentApiTest]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$order->id]]></code>
+      <code><![CDATA[$payment->id]]></code>
+      <code><![CDATA[$payment->id]]></code>
+      <code><![CDATA[$payment->id]]></code>
+      <code><![CDATA[$payment->id]]></code>
+      <code><![CDATA[$payment->id]]></code>
+      <code><![CDATA[$payment->id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="tests/Feature/Products/ProductApiTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ProductApiTest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[test_can_create_product]]></code>
+      <code><![CDATA[test_can_delete_product]]></code>
+      <code><![CDATA[test_can_list_products]]></code>
+      <code><![CDATA[test_can_show_product]]></code>
+      <code><![CDATA[test_can_update_product]]></code>
+      <code><![CDATA[test_returns_404_for_missing_product]]></code>
+      <code><![CDATA[test_validation_requires_name_and_sku]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[ProductApiTest]]></code>
+      <code><![CDATA[ProductApiTest]]></code>
+      <code><![CDATA[ProductApiTest]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$product->id]]></code>
+      <code><![CDATA[$product->id]]></code>
+      <code><![CDATA[$product->id]]></code>
+      <code><![CDATA[$product->id]]></code>
+      <code><![CDATA[$product->id]]></code>
+      <code><![CDATA[$product->id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="tests/Feature/Users/UserApiTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UserApiTest]]></code>
+    </ClassMustBeFinal>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[test_can_create_user]]></code>
+      <code><![CDATA[test_can_delete_user]]></code>
+      <code><![CDATA[test_can_list_users]]></code>
+      <code><![CDATA[test_can_show_user]]></code>
+      <code><![CDATA[test_can_update_user]]></code>
+      <code><![CDATA[test_email_must_be_unique]]></code>
+      <code><![CDATA[test_returns_404_for_missing_user]]></code>
+      <code><![CDATA[test_validation_requires_name_email_password]]></code>
+    </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[UserApiTest]]></code>
+      <code><![CDATA[UserApiTest]]></code>
+      <code><![CDATA[UserApiTest]]></code>
+    </PropertyNotSetInConstructor>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$user->id]]></code>
+      <code><![CDATA[$user->id]]></code>
+      <code><![CDATA[$user->id]]></code>
+      <code><![CDATA[$user->id]]></code>
+      <code><![CDATA[$user->id]]></code>
+      <code><![CDATA[$user->id]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="tests/Unit/Domain/AuditLog/AuditLogTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AuditLogTest]]></code>
+    </ClassMustBeFinal>
+    <InaccessibleProperty>
+      <code><![CDATA[$log->changes]]></code>
+      <code><![CDATA[$log->changes]]></code>
+    </InaccessibleProperty>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$log->action]]></code>
+      <code><![CDATA[$log->actor_id]]></code>
+      <code><![CDATA[$log->actor_type]]></code>
+      <code><![CDATA[$log->subject_id]]></code>
+      <code><![CDATA[$log->subject_type]]></code>
+    </UndefinedMagicPropertyAssignment>
+    <UnusedClass>
+      <code><![CDATA[AuditLogTest]]></code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Unit/Domain/Cars/CarTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CarTest]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$car->brand]]></code>
+      <code><![CDATA[$car->currency]]></code>
+      <code><![CDATA[$car->model]]></code>
+      <code><![CDATA[$car->price_cents]]></code>
+      <code><![CDATA[$car->status]]></code>
+      <code><![CDATA[$car->status]]></code>
+      <code><![CDATA[$car->status]]></code>
+      <code><![CDATA[$car->year]]></code>
+    </UndefinedMagicPropertyAssignment>
+    <UnusedClass>
+      <code><![CDATA[CarTest]]></code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Unit/Domain/Invoices/InvoiceTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvoiceTest]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$invoice->amount_cents]]></code>
+      <code><![CDATA[$invoice->currency]]></code>
+      <code><![CDATA[$invoice->order_id]]></code>
+      <code><![CDATA[$invoice->status]]></code>
+      <code><![CDATA[$invoice->status]]></code>
+      <code><![CDATA[$invoice->status]]></code>
+      <code><![CDATA[$invoice->status]]></code>
+    </UndefinedMagicPropertyAssignment>
+    <UnusedClass>
+      <code><![CDATA[InvoiceTest]]></code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Unit/Domain/Notifications/NotificationTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[NotificationTest]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$notification->channel]]></code>
+      <code><![CDATA[$notification->content]]></code>
+      <code><![CDATA[$notification->recipient_id]]></code>
+      <code><![CDATA[$notification->recipient_type]]></code>
+      <code><![CDATA[$notification->status]]></code>
+      <code><![CDATA[$notification->status]]></code>
+      <code><![CDATA[$notification->status]]></code>
+      <code><![CDATA[$notification->status]]></code>
+      <code><![CDATA[$notification->subject]]></code>
+    </UndefinedMagicPropertyAssignment>
+    <UnusedClass>
+      <code><![CDATA[NotificationTest]]></code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Unit/Domain/Orders/OrderTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[OrderTest]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$order->currency]]></code>
+      <code><![CDATA[$order->status]]></code>
+      <code><![CDATA[$order->status]]></code>
+      <code><![CDATA[$order->status]]></code>
+      <code><![CDATA[$order->status]]></code>
+      <code><![CDATA[$order->status]]></code>
+      <code><![CDATA[$order->total_cents]]></code>
+      <code><![CDATA[$order->user_id]]></code>
+    </UndefinedMagicPropertyAssignment>
+    <UnusedClass>
+      <code><![CDATA[OrderTest]]></code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Unit/Domain/Payments/PaymentTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[PaymentTest]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$payment->amount_cents]]></code>
+      <code><![CDATA[$payment->currency]]></code>
+      <code><![CDATA[$payment->method]]></code>
+      <code><![CDATA[$payment->order_id]]></code>
+      <code><![CDATA[$payment->status]]></code>
+      <code><![CDATA[$payment->status]]></code>
+      <code><![CDATA[$payment->status]]></code>
+      <code><![CDATA[$payment->status]]></code>
+    </UndefinedMagicPropertyAssignment>
+    <UnusedClass>
+      <code><![CDATA[PaymentTest]]></code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Unit/Domain/Products/ProductTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ProductTest]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$product->currency]]></code>
+      <code><![CDATA[$product->name]]></code>
+      <code><![CDATA[$product->price_cents]]></code>
+      <code><![CDATA[$product->sku]]></code>
+      <code><![CDATA[$product->status]]></code>
+      <code><![CDATA[$product->status]]></code>
+      <code><![CDATA[$product->status]]></code>
+      <code><![CDATA[$product->stock_quantity]]></code>
+    </UndefinedMagicPropertyAssignment>
+    <UnusedClass>
+      <code><![CDATA[ProductTest]]></code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Unit/Domain/Users/UserTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UserTest]]></code>
+    </ClassMustBeFinal>
+    <UndefinedMagicPropertyAssignment>
+      <code><![CDATA[$user->email]]></code>
+      <code><![CDATA[$user->name]]></code>
+    </UndefinedMagicPropertyAssignment>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$user->role]]></code>
+    </UndefinedMagicPropertyFetch>
+    <UnusedClass>
+      <code><![CDATA[UserTest]]></code>
+    </UnusedClass>
+  </file>
+</files>
