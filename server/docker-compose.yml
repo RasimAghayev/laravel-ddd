@@ -98,7 +98,7 @@ services:
       - laravel_ddd
 
   pgsql:
-    image: postgres:16-alpine
+    image: postgres:19-alpine
     container_name: pgsql
     restart: always
     shm_size: 128mb
