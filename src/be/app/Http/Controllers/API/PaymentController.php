@@ -48,7 +48,7 @@ class PaymentController extends Controller
 
         $payment = $createPaymentUseCase->execute($data);
 
-        return response()->json(new PaymentResource($payment), Response::HTTP_CREATED);
+        return response()->json(['data' => new PaymentResource($payment)], Response::HTTP_CREATED);
     }
 
     public function show(string $id, GetPaymentUseCase $getPaymentUseCase): JsonResponse
@@ -59,7 +59,7 @@ class PaymentController extends Controller
             return response()->json(['message' => 'Payment not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new PaymentResource($payment));
+        return response()->json(['data' => new PaymentResource($payment)]);
     }
 
     public function update(UpdatePaymentRequest $request, string $id, UpdatePaymentUseCase $updatePaymentUseCase): JsonResponse
@@ -72,7 +72,7 @@ class PaymentController extends Controller
             return response()->json(['message' => 'Payment not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new PaymentResource($payment));
+        return response()->json(['data' => new PaymentResource($payment)]);
     }
 
     public function destroy(string $id, DeletePaymentUseCase $deletePaymentUseCase): JsonResponse

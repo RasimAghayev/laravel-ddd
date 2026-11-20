@@ -17,11 +17,11 @@ class CreatePaymentUseCase
     public function execute(PaymentData $data): Payment
     {
         $payment = new Payment;
-        $payment->order_id = $data->orderId;
+        $payment->order_id = $data->orderId ?? '';
         $payment->amount_cents = $data->amountCents;
         $payment->currency = $data->currency;
-        $payment->method = $data->method;
-        $payment->status = $data->status;
+        $payment->method = (string) $data->method;
+        $payment->status = (string) $data->status;
         $payment->transaction_reference = $data->transactionReference;
 
         $this->paymentRepository->save($payment);

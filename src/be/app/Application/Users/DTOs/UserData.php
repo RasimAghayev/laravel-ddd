@@ -11,8 +11,8 @@ final class UserData
 {
     public function __construct(
         public readonly ?string $id,
-        public readonly string $name,
-        public readonly Email $email,
+        public readonly ?string $name,
+        public readonly ?Email $email,
         public readonly string $password,
         public readonly UserRole $role,
     ) {}
@@ -21,8 +21,8 @@ final class UserData
     {
         return new self(
             id: $data['id'] ?? null,
-            name: $data['name'],
-            email: Email::from($data['email']),
+            name: $data['name'] ?? null,
+            email: isset($data['email']) ? Email::from($data['email']) : null,
             password: $data['password'] ?? '',
             role: UserRole::from($data['role'] ?? UserRole::USER),
         );

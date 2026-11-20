@@ -48,7 +48,7 @@ class ProductController extends Controller
 
         $product = $createProductUseCase->execute($data);
 
-        return response()->json(new ProductResource($product), Response::HTTP_CREATED);
+        return response()->json(['data' => new ProductResource($product)], Response::HTTP_CREATED);
     }
 
     public function show(string $id, GetProductUseCase $getProductUseCase): JsonResponse
@@ -59,7 +59,7 @@ class ProductController extends Controller
             return response()->json(['message' => 'Product not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new ProductResource($product));
+        return response()->json(['data' => new ProductResource($product)]);
     }
 
     public function update(UpdateProductRequest $request, string $id, UpdateProductUseCase $updateProductUseCase): JsonResponse
@@ -72,7 +72,7 @@ class ProductController extends Controller
             return response()->json(['message' => 'Product not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new ProductResource($product));
+        return response()->json(['data' => new ProductResource($product)]);
     }
 
     public function destroy(string $id, DeleteProductUseCase $deleteProductUseCase): JsonResponse

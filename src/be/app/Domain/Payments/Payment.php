@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace DDD\Domain\Payments;
 
 use DDD\Domain\Orders\Order;
-use DDD\Domain\Payments\ValueObjects\PaymentMethod;
 use DDD\Domain\Payments\ValueObjects\PaymentStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -21,8 +20,6 @@ class Payment extends Model
 
     protected $casts = [
         'amount_cents' => 'integer',
-        'status' => PaymentStatus::class,
-        'method' => PaymentMethod::class,
         'paid_at' => 'datetime',
     ];
 
@@ -41,33 +38,30 @@ class Payment extends Model
         return number_format($this->amount_cents / 100, 2, '.', '').' '.($this->currency ?? 'USD');
     }
 
-    public function status(): PaymentStatus
-    {
-        return $this->status ?? PaymentStatus::from(PaymentStatus::PENDING);
-    }
-
     public function isPaid(): bool
     {
-        return $this->status->isPaid();
+        $status = $this->getAttribute('status');
+
+        if ($status instanceof PaymentStatus) {
+            return $status->isPaid();
+        }
+
+        return PaymentStatus::from($status ?? PaymentStatus::PENDING)->isPaid();
     }
 
     public function complete(string $transactionReference): void
     {
-        $this->status = PaymentStatus::COMPLETED;
+        $this->status = PaymentStatus::from(PaymentStatus::COMPLETED);
         $this->transaction_reference = $transactionReference;
-        $this->paid_at = now();
-        $this->save();
     }
 
     public function fail(): void
     {
-        $this->status = PaymentStatus::FAILED;
-        $this->save();
+        $this->status = PaymentStatus::from(PaymentStatus::FAILED);
     }
 
     public function refund(): void
     {
-        $this->status = PaymentStatus::REFUNDED;
-        $this->save();
+        $this->status = PaymentStatus::from(PaymentStatus::REFUNDED);
     }
 }

@@ -17,12 +17,12 @@ class CreateCarUseCase
     public function execute(CarData $data): Car
     {
         $car = new Car;
-        $car->brand = $data->brand;
-        $car->model = $data->model;
+        $car->brand = $data->brand ?? '';
+        $car->model = $data->model ?? '';
         $car->year = $data->year;
         $car->price_cents = $data->price->cents;
         $car->currency = $data->price->currency;
-        $car->status = $data->status;
+        $car->status = (string) $data->status;
 
         $this->carRepository->save($car);
 

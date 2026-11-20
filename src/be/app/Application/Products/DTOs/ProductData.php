@@ -10,7 +10,7 @@ final class ProductData
 {
     public function __construct(
         public readonly ?string $id,
-        public readonly string $name,
+        public readonly ?string $name,
         public readonly string $sku,
         public readonly string $description,
         public readonly int $priceCents,
@@ -23,10 +23,10 @@ final class ProductData
     {
         return new self(
             id: $data['id'] ?? null,
-            name: $data['name'],
-            sku: $data['sku'],
+            name: $data['name'] ?? null,
+            sku: $data['sku'] ?? '',
             description: $data['description'] ?? '',
-            priceCents: (int) $data['price_cents'],
+            priceCents: (int) ($data['price_cents'] ?? 0),
             currency: $data['currency'] ?? 'USD',
             status: ProductStatus::from($data['status'] ?? ProductStatus::ACTIVE),
             stockQuantity: (int) ($data['stock_quantity'] ?? 0),

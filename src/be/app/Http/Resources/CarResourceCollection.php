@@ -12,7 +12,7 @@ class CarResourceCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'data' => CarResource::collection($this->collection)->toArray($request)['data'],
+            'data' => $this->collection->map(fn ($item) => (new CarResource($item))->toArray($request)),
             'meta' => [
                 'total' => $this->collection->count(),
             ],

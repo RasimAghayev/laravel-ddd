@@ -22,12 +22,14 @@ class UpdateProductUseCase
             return null;
         }
 
-        $product->name = $data->name;
+        if ($data->name !== null) {
+            $product->name = $data->name;
+        }
         $product->sku = $data->sku;
         $product->description = $data->description;
         $product->price_cents = $data->priceCents;
         $product->currency = $data->currency;
-        $product->status = $data->status;
+        $product->status = (string) $data->status;
         $product->stock_quantity = $data->stockQuantity;
 
         $this->productRepository->save($product);

@@ -21,7 +21,7 @@ class CreateUserUseCase
         $user->name = $data->name;
         $user->email = (string) $data->email;
         $user->password = Hash::make($data->password);
-        $user->role = $data->role;
+        $user->role = (string) $data->role;
 
         $this->userRepository->save($user);
 

@@ -48,7 +48,7 @@ class CarController extends Controller
 
         $car = $createCarUseCase->execute($data);
 
-        return response()->json(new CarResource($car), Response::HTTP_CREATED);
+        return response()->json(['data' => new CarResource($car)], Response::HTTP_CREATED);
     }
 
     public function show(string $id, GetCarUseCase $getCarUseCase): JsonResponse
@@ -59,7 +59,7 @@ class CarController extends Controller
             return response()->json(['message' => 'Car not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new CarResource($car));
+        return response()->json(['data' => new CarResource($car)]);
     }
 
     public function update(UpdateCarRequest $request, string $id, UpdateCarUseCase $updateCarUseCase): JsonResponse
@@ -72,7 +72,7 @@ class CarController extends Controller
             return response()->json(['message' => 'Car not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new CarResource($car));
+        return response()->json(['data' => new CarResource($car)]);
     }
 
     public function destroy(string $id, DeleteCarUseCase $deleteCarUseCase): JsonResponse

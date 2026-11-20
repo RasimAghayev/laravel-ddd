@@ -12,7 +12,7 @@ class NotificationResourceCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'data' => NotificationResource::collection($this->collection)->toArray($request)['data'],
+            'data' => $this->collection->map(fn ($item) => (new NotificationResource($item))->toArray($request)),
             'meta' => [
                 'total' => $this->collection->count(),
             ],

@@ -22,7 +22,7 @@ final class AuditLogData
             id: $data['id'] ?? null,
             actorType: $data['actor_type'] ?? null,
             actorId: $data['actor_id'] ?? null,
-            action: $data['action'],
+            action: $data['action'] ?? null,
             subjectType: $data['subject_type'] ?? null,
             subjectId: $data['subject_id'] ?? null,
             changes: $data['changes'] ?? [],

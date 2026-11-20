@@ -10,7 +10,7 @@ WORKDIR /var/www/html/be
 
 COPY src/be/composer.json src/be/composer.json* ./
 RUN --mount=type=cache,target=/root/.composer/cache \
-    composer install --no-ansi --no-interaction --no-progress --prefer-dist --no-dev || true
+    composer install --no-ansi --no-interaction --no-progress --prefer-dist --no-dev --ignore-platform-req=php || true
 
 # Stage 3: runtime — composer runtime for running composer commands
 FROM base AS runtime

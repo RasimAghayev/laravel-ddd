@@ -41,7 +41,7 @@ class AuditLogController extends Controller
 
         $log = $createAuditLogUseCase->execute($data);
 
-        return response()->json(new AuditLogResource($log), Response::HTTP_CREATED);
+        return response()->json(['data' => new AuditLogResource($log)], Response::HTTP_CREATED);
     }
 
     public function show(string $id): JsonResponse
@@ -54,6 +54,6 @@ class AuditLogController extends Controller
             return response()->json(['message' => 'Audit log not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(new AuditLogResource($log));
+        return response()->json(['data' => new AuditLogResource($log)]);
     }
 }

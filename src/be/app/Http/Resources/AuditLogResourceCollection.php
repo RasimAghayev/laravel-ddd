@@ -12,7 +12,7 @@ class AuditLogResourceCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'data' => AuditLogResource::collection($this->collection)->toArray($request)['data'],
+            'data' => $this->collection->map(fn ($item) => (new AuditLogResource($item))->toArray($request)),
             'meta' => [
                 'total' => $this->collection->count(),
             ],

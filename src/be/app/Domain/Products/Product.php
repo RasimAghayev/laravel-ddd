@@ -18,7 +18,6 @@ class Product extends Model
 
     protected $casts = [
         'price_cents' => 'integer',
-        'status' => ProductStatus::class,
         'is_active' => 'boolean',
     ];
 
@@ -32,31 +31,29 @@ class Product extends Model
         return number_format($this->price_cents / 100, 2, '.', '').' '.($this->currency ?? 'USD');
     }
 
-    public function status(): ProductStatus
-    {
-        return $this->status ?? ProductStatus::from(ProductStatus::ACTIVE);
-    }
-
     public function isActive(): bool
     {
-        return $this->status->isActive();
+        $status = $this->getAttribute('status');
+
+        if ($status instanceof ProductStatus) {
+            return $status->isActive();
+        }
+
+        return ProductStatus::from($status ?? ProductStatus::ACTIVE)->isActive();
     }
 
     public function activate(): void
     {
-        $this->status = ProductStatus::ACTIVE;
-        $this->save();
+        $this->status = ProductStatus::from(ProductStatus::ACTIVE);
     }
 
     public function deactivate(): void
     {
-        $this->status = ProductStatus::INACTIVE;
-        $this->save();
+        $this->status = ProductStatus::from(ProductStatus::INACTIVE);
     }
 
     public function archive(): void
     {
-        $this->status = ProductStatus::ARCHIVED;
-        $this->save();
+        $this->status = ProductStatus::from(ProductStatus::ARCHIVED);
     }
 }

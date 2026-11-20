@@ -20,7 +20,6 @@ class Order extends Model
 
     protected $casts = [
         'total_cents' => 'integer',
-        'status' => OrderStatus::class,
     ];
 
     public function user(): BelongsTo
@@ -38,37 +37,34 @@ class Order extends Model
         return number_format($this->total_cents / 100, 2, '.', '').' '.($this->currency ?? 'USD');
     }
 
-    public function status(): OrderStatus
-    {
-        return $this->status ?? OrderStatus::from(OrderStatus::PENDING);
-    }
-
     public function isPending(): bool
     {
-        return $this->status->isPending();
+        $status = $this->getAttribute('status');
+
+        if ($status instanceof OrderStatus) {
+            return $status->isPending();
+        }
+
+        return OrderStatus::from($status ?? OrderStatus::PENDING)->isPending();
     }
 
     public function confirm(): void
     {
-        $this->status = OrderStatus::CONFIRMED;
-        $this->save();
+        $this->status = OrderStatus::from(OrderStatus::CONFIRMED);
     }
 
     public function ship(): void
     {
-        $this->status = OrderStatus::SHIPPED;
-        $this->save();
+        $this->status = OrderStatus::from(OrderStatus::SHIPPED);
     }
 
     public function deliver(): void
     {
-        $this->status = OrderStatus::DELIVERED;
-        $this->save();
+        $this->status = OrderStatus::from(OrderStatus::DELIVERED);
     }
 
     public function cancel(): void
     {
-        $this->status = OrderStatus::CANCELLED;
-        $this->save();
+        $this->status = OrderStatus::from(OrderStatus::CANCELLED);
     }
 }

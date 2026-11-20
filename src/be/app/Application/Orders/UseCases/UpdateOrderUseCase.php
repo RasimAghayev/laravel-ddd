@@ -22,10 +22,12 @@ class UpdateOrderUseCase
             return null;
         }
 
-        $order->user_id = $data->userId;
+        if ($data->userId !== null) {
+            $order->user_id = $data->userId;
+        }
         $order->total_cents = $data->totalCents;
         $order->currency = $data->currency;
-        $order->status = $data->status;
+        $order->status = (string) $data->status;
 
         $this->orderRepository->save($order);
 

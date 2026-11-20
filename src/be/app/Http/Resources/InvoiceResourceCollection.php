@@ -12,7 +12,7 @@ class InvoiceResourceCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'data' => InvoiceResource::collection($this->collection)->toArray($request)['data'],
+            'data' => $this->collection->map(fn ($item) => (new InvoiceResource($item))->toArray($request)),
             'meta' => [
                 'total' => $this->collection->count(),
             ],
