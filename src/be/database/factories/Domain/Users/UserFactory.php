@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories\Domain\User;
+namespace Database\Factories\Domain\Users;
 
 use DDD\Domain\Users\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
