@@ -501,9 +501,6 @@
       <code><![CDATA[findByOrderId]]></code>
       <code><![CDATA[findByStatus]]></code>
     </PossiblyUnusedMethod>
-    <UndefinedClass>
-      <code><![CDATA[InvoiceStatus]]></code>
-    </UndefinedClass>
   </file>
   <file src="app/Domain/Invoices/ValueObjects/InvoiceStatus.php">
     <PossiblyUnusedMethod>
@@ -542,9 +539,6 @@
       <code><![CDATA[findByRecipient]]></code>
       <code><![CDATA[findByStatus]]></code>
     </PossiblyUnusedMethod>
-    <UndefinedClass>
-      <code><![CDATA[NotificationStatus]]></code>
-    </UndefinedClass>
   </file>
   <file src="app/Domain/Notifications/ValueObjects/NotificationStatus.php">
     <PossiblyUnusedMethod>
@@ -625,9 +619,6 @@
       <code><![CDATA[findByOrderId]]></code>
       <code><![CDATA[findByStatus]]></code>
     </PossiblyUnusedMethod>
-    <UndefinedClass>
-      <code><![CDATA[PaymentStatus]]></code>
-    </UndefinedClass>
   </file>
   <file src="app/Domain/Payments/ValueObjects/PaymentStatus.php">
     <PossiblyUnusedMethod>
@@ -1485,12 +1476,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[EloquentInvoiceRepository]]></code>
     </ClassMustBeFinal>
-    <ImplementedParamTypeMismatch>
-      <code><![CDATA[$status]]></code>
-    </ImplementedParamTypeMismatch>
-    <MethodSignatureMismatch>
-      <code><![CDATA[$status]]></code>
-    </MethodSignatureMismatch>
     <MissingOverrideAttribute>
       <code><![CDATA[public function count(): int]]></code>
       <code><![CDATA[public function delete(Invoice $invoice): void]]></code>
@@ -1511,12 +1496,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[EloquentNotificationRepository]]></code>
     </ClassMustBeFinal>
-    <ImplementedParamTypeMismatch>
-      <code><![CDATA[$status]]></code>
-    </ImplementedParamTypeMismatch>
-    <MethodSignatureMismatch>
-      <code><![CDATA[$status]]></code>
-    </MethodSignatureMismatch>
     <MissingOverrideAttribute>
       <code><![CDATA[public function count(): int]]></code>
       <code><![CDATA[public function delete(Notification $notification): void]]></code>
@@ -1555,12 +1534,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[EloquentPaymentRepository]]></code>
     </ClassMustBeFinal>
-    <ImplementedParamTypeMismatch>
-      <code><![CDATA[$status]]></code>
-    </ImplementedParamTypeMismatch>
-    <MethodSignatureMismatch>
-      <code><![CDATA[$status]]></code>
-    </MethodSignatureMismatch>
     <MissingOverrideAttribute>
       <code><![CDATA[public function count(): int]]></code>
       <code><![CDATA[public function delete(Payment $payment): void]]></code>
