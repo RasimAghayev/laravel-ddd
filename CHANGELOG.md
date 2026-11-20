@@ -12,9 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Orders domain: entity, OrderStatus VO, repository, use cases, controller, resources, requests, migration, factory, tests
 - Products domain: entity, ProductStatus VO, repository, use cases, controller, resources, requests, migration, factory, tests
 - AuditLog domain: entity, repository, use cases, controller, resources, requests, migration, factory, tests
+- Invoices domain: entity, InvoiceStatus VO, repository, use cases, controller, resources, requests, migration, factory, tests
+- Payments domain: entity, PaymentStatus/PaymentMethod VOs, repository, use cases, controller, resources, requests, migration, factory, tests
+- Notifications domain: entity, NotificationChannel/NotificationStatus VOs, repository, use cases, controller, resources, requests, migration, factory, tests
+- `order_items` migration linking orders to products
 - Docker files moved into `server/{php,nginx,composer}/` subfolders
-- `docker-compose.yml` moved into `server/` with updated build contexts
-- GitHub Actions CI workflow (PHP 8.5, sqlite)
+- `docker-compose.yml` moved into `server/` with updated build contexts, multi-stage builds, healthchecks
+- GitHub Actions CI workflow (PHP 8.5, sqlite, Pint + Psalm + PHPUnit)
+- Psalm static analysis (`vimeo/psalm ^6.0` + `psalm/plugin-laravel`, `psalm.xml`, `psalm-baseline.xml`)
 
 ### Changed
 - Package renamed from `laravel/laravel` to `rasimagayev/laravel-ddd`

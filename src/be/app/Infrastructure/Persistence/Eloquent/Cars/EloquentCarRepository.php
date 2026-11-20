@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace DDD\Infrastructure\Persistence\Eloquent\Cars;
 
-use DDD\Application\Cars\DTOs\CarData;
 use DDD\Domain\Cars\Car;
 use DDD\Domain\Cars\Repository\CarRepositoryInterface;
 use DDD\Domain\Shared\Criteria\Pagination;
-use Illuminate\Support\Facades\DB;
 
 class EloquentCarRepository implements CarRepositoryInterface
 {

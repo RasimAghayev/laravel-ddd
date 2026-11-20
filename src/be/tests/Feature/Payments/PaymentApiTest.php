@@ -6,10 +6,12 @@ namespace Tests\Feature\Payments;
 
 use DDD\Domain\Orders\Order;
 use DDD\Domain\Payments\Payment;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class PaymentApiTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_can_list_payments(): void
     {
         Payment::factory()->count(3)->create();

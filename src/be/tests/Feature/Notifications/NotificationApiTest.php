@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Tests\Feature\Notifications;
 
 use DDD\Domain\Notifications\Notification;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class NotificationApiTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_can_list_notifications(): void
     {
         Notification::factory()->count(3)->create();

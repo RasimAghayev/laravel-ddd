@@ -7,7 +7,6 @@ namespace DDD\Infrastructure\Persistence\Eloquent\Users;
 use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Domain\Users\Repository\UserRepositoryInterface;
 use DDD\Domain\Users\User;
-use Illuminate\Support\Facades\DB;
 
 class EloquentUserRepository implements UserRepositoryInterface
 {

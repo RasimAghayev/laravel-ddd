@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Tests\Feature\Products;
 
 use DDD\Domain\Products\Product;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class ProductApiTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_can_list_products(): void
     {
         Product::factory()->count(3)->create();

@@ -5,7 +5,7 @@
     xsi:schemaLocation="https://getpsalm.org/psalm vendor/vimeo/psalm/psalm.xsd"
     errorBaseline="psalm-baseline.xml"
     resolveFromConfigPath="true"
-    finder>
+>
     <projectFiles>
         <directory name="app"/>
         <directory name="tests"/>

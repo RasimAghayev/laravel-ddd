@@ -15,7 +15,7 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('users', UserController::class);
     Route::apiResource('orders', OrderController::class);
     Route::apiResource('products', ProductController::class);
-    Route::apiResource('audit-logs', AuditLogController::class);
+    Route::apiResource('audit-logs', AuditLogController::class)->only(['index', 'store', 'show']);
     Route::apiResource('invoices', InvoiceController::class);
     Route::apiResource('payments', PaymentController::class);
     Route::apiResource('notifications', NotificationController::class);

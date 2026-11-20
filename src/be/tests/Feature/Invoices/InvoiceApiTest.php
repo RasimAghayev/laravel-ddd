@@ -6,10 +6,12 @@ namespace Tests\Feature\Invoices;
 
 use DDD\Domain\Invoices\Invoice;
 use DDD\Domain\Orders\Order;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class InvoiceApiTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_can_list_invoices(): void
     {
         Invoice::factory()->count(3)->create();

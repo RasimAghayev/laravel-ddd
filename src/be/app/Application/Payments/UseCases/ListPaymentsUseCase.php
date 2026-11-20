@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace DDD\Application\Payments\UseCases;
 
-use DDD\Domain\Payments\Payment;
 use DDD\Domain\Payments\Repository\PaymentRepositoryInterface;
 use DDD\Domain\Shared\Criteria\Pagination;
 

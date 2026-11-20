@@ -6,7 +6,6 @@ namespace DDD\Application\Users\UseCases;
 
 use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Domain\Users\Repository\UserRepositoryInterface;
-use DDD\Domain\Users\User;
 
 class ListUsersUseCase
 {

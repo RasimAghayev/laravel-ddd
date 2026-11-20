@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Tests\Feature\Users;
 
 use DDD\Domain\Users\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class UserApiTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_can_list_users(): void
     {
         User::factory()->count(3)->create();

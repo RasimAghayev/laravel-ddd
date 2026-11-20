@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace DDD\Application\Notifications\DTOs;
 
-use DDD\Domain\Notifications\ValueObjects\NotificationChannel;
 use DDD\Domain\Notifications\ValueObjects\NotificationStatus;
 
 final class NotificationData

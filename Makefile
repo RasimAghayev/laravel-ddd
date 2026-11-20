@@ -24,6 +24,7 @@ build:
 	$(DOCKER_COMPOSE) build
 
 test:
+	$(DOCKER_COMPOSE) run --rm artisan migrate --force
 	$(DOCKER_COMPOSE) run --rm phpunit
 
 verify: build test

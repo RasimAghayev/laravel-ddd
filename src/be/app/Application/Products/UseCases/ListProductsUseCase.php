@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace DDD\Application\Products\UseCases;
 
-use DDD\Domain\Products\Product;
 use DDD\Domain\Products\Repository\ProductRepositoryInterface;
 use DDD\Domain\Shared\Criteria\Pagination;
 

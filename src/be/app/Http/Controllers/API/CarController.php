@@ -18,7 +18,6 @@ use DDD\Http\Resources\CarResourceCollection;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 
 class CarController extends Controller
 {

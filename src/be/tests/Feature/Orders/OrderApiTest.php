@@ -6,10 +6,12 @@ namespace Tests\Feature\Orders;
 
 use DDD\Domain\Orders\Order;
 use DDD\Domain\Users\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class OrderApiTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_can_list_orders(): void
     {
         Order::factory()->count(3)->create();

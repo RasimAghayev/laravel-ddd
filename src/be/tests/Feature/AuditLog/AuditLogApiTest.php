@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Tests\Feature\AuditLog;
 
 use DDD\Domain\AuditLog\AuditLog;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class AuditLogApiTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_can_list_audit_logs(): void
     {
         AuditLog::factory()->count(3)->create();

@@ -8,7 +8,6 @@ use DDD\Domain\Cars\ValueObjects\CarStatus;
 use DDD\Domain\Cars\ValueObjects\Price;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Car extends Model
 {

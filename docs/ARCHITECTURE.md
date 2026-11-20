@@ -48,9 +48,8 @@ REST API v1 controllers, API Resources, FormRequests, and routes.
 |-----------|--------------|-----|
 | DDD (bounded context, aggregate, VO) | Cars, Users, Orders, Products, AuditLog, Invoices, Payments, Notifications | Real domain complexity and invariants |
 | SOLID | Repository interfaces, Use Cases | Classes have single reason to change; concrete coupling blocked by interfaces |
-| Clean/Hexagonal | Repository pattern | External systems (DB) can be swapped — `MODE=standalone` stub adapters possible |
-| DRY | Shared Pagination criteria, Base UseCase patterns | Same logic repeated across domains |
-| EDA | Domain events in Orders/Payments/Notifications | Real async reactions between modules |
+| Clean/Hexagonal | Repository pattern | External systems (DB) abstracted behind interfaces |
+| DRY | Shared Pagination criteria | Same pagination logic repeated across domains |
 | KISS / YAGNI | Always | No speculative layers; CRUD-style code stays simple |
 
 ## Where Principles Are Not Applied

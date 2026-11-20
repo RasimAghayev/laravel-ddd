@@ -27,6 +27,8 @@
 
 /src/be/storage/*.key
 /src/be/.env
+/src/be/.env.*
+/src/be/!.env.example
 /src/be/Homestead.yaml
 /src/be/Homestead.json
 /src/be//.vagrant

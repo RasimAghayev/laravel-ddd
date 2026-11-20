@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Tests\Feature\Cars;
 
 use DDD\Domain\Cars\Car;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class CarApiTest extends TestCase
 {
+    use RefreshDatabase;
     public function test_can_list_cars(): void
     {
         Car::factory()->count(3)->create();
