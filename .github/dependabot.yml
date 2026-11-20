@@ -6,21 +6,8 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "06:00"
-    target-branch: "master"
+    target-branch: "preview"
     open-pull-requests-limit: 10
-    commit-message:
-      prefix: "build(deps)"
-      prefix-development: "build(deps-dev)"
-      include: "scope"
-
-  - package-ecosystem: "npm"
-    directory: "/src/fe"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:00"
-    target-branch: "master"
-    open-pull-requests-limit: 5
     commit-message:
       prefix: "build(deps)"
       prefix-development: "build(deps-dev)"
@@ -32,7 +19,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "06:00"
-    target-branch: "master"
+    target-branch: "preview"
     open-pull-requests-limit: 5
     commit-message:
       prefix: "build(deps)"
@@ -44,7 +31,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "06:00"
-    target-branch: "master"
+    target-branch: "preview"
     open-pull-requests-limit: 5
     commit-message:
       prefix: "ci(deps)"
