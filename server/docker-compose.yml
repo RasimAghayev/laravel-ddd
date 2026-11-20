@@ -98,7 +98,7 @@ services:
       - laravel_ddd
 
   pgsql:
-    image: postgres:19-alpine
+    image: postgres:16-alpine
     container_name: pgsql
     restart: always
     shm_size: 128mb
@@ -120,7 +120,7 @@ services:
       start_period: 10s
 
   redis:
-    image: redis:8-alpine
+    image: redis:7-alpine
     container_name: redis
     command: redis-server --requirepass root --save 20 1 --loglevel warning
     environment:
