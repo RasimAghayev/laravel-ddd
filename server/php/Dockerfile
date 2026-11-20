@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Stage 1: base — pinned PHP + system deps + extensions
-FROM php:8.5-fpm AS base
+FROM php:8.6-fpm AS base
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
@@ -53,7 +53,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
 CMD ["php", "artisan", "test"]
 
 # Stage 5: runtime — slim production runtime, no compilers, no dev tools
-FROM php:8.5-fpm AS runtime
+FROM php:8.6-fpm AS runtime
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
