@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DDD\Domain\Payments\Repository;
 
 use DDD\Domain\Payments\Payment;
+use DDD\Domain\Payments\ValueObjects\PaymentStatus;
 use DDD\Domain\Shared\Criteria\Pagination;
 
 interface PaymentRepositoryInterface

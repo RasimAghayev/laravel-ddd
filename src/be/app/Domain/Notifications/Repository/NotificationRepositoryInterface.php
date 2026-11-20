@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DDD\Domain\Notifications\Repository;
 
 use DDD\Domain\Notifications\Notification;
+use DDD\Domain\Notifications\ValueObjects\NotificationStatus;
 use DDD\Domain\Shared\Criteria\Pagination;
 
 interface NotificationRepositoryInterface

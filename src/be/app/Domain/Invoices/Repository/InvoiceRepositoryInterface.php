@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DDD\Domain\Invoices\Repository;
 
 use DDD\Domain\Invoices\Invoice;
+use DDD\Domain\Invoices\ValueObjects\InvoiceStatus;
 use DDD\Domain\Shared\Criteria\Pagination;
 
 interface InvoiceRepositoryInterface
