@@ -11,8 +11,7 @@ class ListPaymentsUseCase
 {
     public function __construct(
         private readonly PaymentRepositoryInterface $paymentRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(?Pagination $pagination = null): array
     {

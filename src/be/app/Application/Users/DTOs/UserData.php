@@ -15,8 +15,7 @@ final class UserData
         public readonly Email $email,
         public readonly string $password,
         public readonly UserRole $role,
-    ) {
-    }
+    ) {}
 
     public static function fromRequest(array $data): self
     {

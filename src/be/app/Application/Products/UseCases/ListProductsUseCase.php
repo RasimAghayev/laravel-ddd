@@ -11,8 +11,7 @@ class ListProductsUseCase
 {
     public function __construct(
         private readonly ProductRepositoryInterface $productRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(?Pagination $pagination = null): array
     {

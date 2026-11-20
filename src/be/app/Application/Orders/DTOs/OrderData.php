@@ -14,8 +14,7 @@ final class OrderData
         public readonly int $totalCents,
         public readonly string $currency,
         public readonly OrderStatus $status,
-    ) {
-    }
+    ) {}
 
     public static function fromRequest(array $data): self
     {

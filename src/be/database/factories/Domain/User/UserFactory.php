@@ -2,12 +2,13 @@
 
 namespace Database\Factories\Domain\User;
 
+use DDD\Domain\Users\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\DDD\Domain\Users\User>
+ * @extends Factory<User>
  */
 class UserFactory extends Factory
 {

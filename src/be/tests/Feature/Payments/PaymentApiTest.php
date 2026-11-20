@@ -12,6 +12,7 @@ use Tests\TestCase;
 class PaymentApiTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_can_list_payments(): void
     {
         Payment::factory()->count(3)->create();
@@ -62,7 +63,7 @@ class PaymentApiTest extends TestCase
     {
         $payment = Payment::factory()->create();
 
-        $response = $this->getJson('/api/v1/payments/' . $payment->id);
+        $response = $this->getJson('/api/v1/payments/'.$payment->id);
 
         $response->assertStatus(200)
             ->assertJson(['data' => ['id' => (string) $payment->id]]);
@@ -79,7 +80,7 @@ class PaymentApiTest extends TestCase
     {
         $payment = Payment::factory()->create(['status' => 'pending']);
 
-        $response = $this->putJson('/api/v1/payments/' . $payment->id, [
+        $response = $this->putJson('/api/v1/payments/'.$payment->id, [
             'status' => 'completed',
         ]);
 
@@ -96,7 +97,7 @@ class PaymentApiTest extends TestCase
     {
         $payment = Payment::factory()->create();
 
-        $response = $this->deleteJson('/api/v1/payments/' . $payment->id);
+        $response = $this->deleteJson('/api/v1/payments/'.$payment->id);
 
         $response->assertStatus(204);
 

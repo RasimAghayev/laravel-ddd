@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace DDD\Domain\Payments;
 
+use DDD\Domain\Orders\Order;
 use DDD\Domain\Payments\ValueObjects\PaymentMethod;
 use DDD\Domain\Payments\ValueObjects\PaymentStatus;
-use DDD\Domain\Orders\Order;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -38,7 +38,7 @@ class Payment extends Model
 
     public function amount(): string
     {
-        return number_format($this->amount_cents / 100, 2, '.', '') . ' ' . ($this->currency ?? 'USD');
+        return number_format($this->amount_cents / 100, 2, '.', '').' '.($this->currency ?? 'USD');
     }
 
     public function status(): PaymentStatus

@@ -12,12 +12,11 @@ class CreateInvoiceUseCase
 {
     public function __construct(
         private readonly InvoiceRepositoryInterface $invoiceRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(InvoiceData $data): Invoice
     {
-        $invoice = new Invoice();
+        $invoice = new Invoice;
         $invoice->order_id = $data->orderId;
         $invoice->amount_cents = $data->amountCents;
         $invoice->currency = $data->currency;

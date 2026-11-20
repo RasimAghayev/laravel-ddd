@@ -11,8 +11,7 @@ class GetNotificationUseCase
 {
     public function __construct(
         private readonly NotificationRepositoryInterface $notificationRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id): ?Notification
     {

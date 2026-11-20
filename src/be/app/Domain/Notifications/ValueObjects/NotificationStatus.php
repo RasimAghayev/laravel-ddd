@@ -9,16 +9,18 @@ use InvalidArgumentException;
 final class NotificationStatus
 {
     public const PENDING = 'pending';
+
     public const SENT = 'sent';
+
     public const FAILED = 'failed';
+
     public const READ = 'read';
 
     public const array VALUES = [self::PENDING, self::SENT, self::FAILED, self::READ];
 
     private function __construct(
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     public static function from(string $value): self
     {

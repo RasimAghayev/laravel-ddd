@@ -12,7 +12,7 @@ class OrderTest extends TestCase
 {
     public function test_order_has_default_pending_status(): void
     {
-        $order = new Order();
+        $order = new Order;
         $order->user_id = 'user-1';
         $order->total_cents = 2500000;
         $order->currency = 'USD';
@@ -24,7 +24,7 @@ class OrderTest extends TestCase
 
     public function test_order_can_be_confirmed(): void
     {
-        $order = new Order();
+        $order = new Order;
         $order->status = OrderStatus::from(OrderStatus::PENDING);
         $order->confirm();
 
@@ -34,7 +34,7 @@ class OrderTest extends TestCase
 
     public function test_order_can_be_shipped(): void
     {
-        $order = new Order();
+        $order = new Order;
         $order->status = OrderStatus::from(OrderStatus::CONFIRMED);
         $order->ship();
 
@@ -43,7 +43,7 @@ class OrderTest extends TestCase
 
     public function test_order_can_be_delivered(): void
     {
-        $order = new Order();
+        $order = new Order;
         $order->status = OrderStatus::from(OrderStatus::SHIPPED);
         $order->deliver();
 
@@ -52,7 +52,7 @@ class OrderTest extends TestCase
 
     public function test_order_can_be_cancelled(): void
     {
-        $order = new Order();
+        $order = new Order;
         $order->status = OrderStatus::from(OrderStatus::PENDING);
         $order->cancel();
 

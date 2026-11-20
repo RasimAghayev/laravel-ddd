@@ -12,12 +12,11 @@ class CreateNotificationUseCase
 {
     public function __construct(
         private readonly NotificationRepositoryInterface $notificationRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(NotificationData $data): Notification
     {
-        $notification = new Notification();
+        $notification = new Notification;
         $notification->recipient_type = $data->recipientType;
         $notification->recipient_id = $data->recipientId;
         $notification->channel = $data->channel;

@@ -11,8 +11,7 @@ class ListUsersUseCase
 {
     public function __construct(
         private readonly UserRepositoryInterface $userRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(?Pagination $pagination = null): array
     {

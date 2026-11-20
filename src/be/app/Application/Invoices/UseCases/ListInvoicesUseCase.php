@@ -11,8 +11,7 @@ class ListInvoicesUseCase
 {
     public function __construct(
         private readonly InvoiceRepositoryInterface $invoiceRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(?Pagination $pagination = null): array
     {

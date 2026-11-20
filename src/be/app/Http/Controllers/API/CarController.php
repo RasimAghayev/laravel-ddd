@@ -10,6 +10,7 @@ use DDD\Application\Cars\UseCases\DeleteCarUseCase;
 use DDD\Application\Cars\UseCases\GetCarUseCase;
 use DDD\Application\Cars\UseCases\ListCarsUseCase;
 use DDD\Application\Cars\UseCases\UpdateCarUseCase;
+use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Http\Controllers\Controller;
 use DDD\Http\Requests\StoreCarRequest;
 use DDD\Http\Requests\UpdateCarRequest;
@@ -27,8 +28,7 @@ class CarController extends Controller
         private readonly GetCarUseCase $getCar,
         private readonly UpdateCarUseCase $updateCar,
         private readonly DeleteCarUseCase $deleteCar,
-    ) {
-    }
+    ) {}
 
     public function index(Request $request): CarResourceCollection
     {
@@ -36,7 +36,7 @@ class CarController extends Controller
         $perPage = (int) $request->query('per_page', 15);
 
         $cars = $this->listCars->execute(
-            \DDD\Domain\Shared\Criteria\Pagination::create($page, $perPage)
+            Pagination::create($page, $perPage)
         );
 
         return new CarResourceCollection($cars);

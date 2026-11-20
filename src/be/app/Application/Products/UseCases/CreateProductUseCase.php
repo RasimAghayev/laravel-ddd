@@ -12,12 +12,11 @@ class CreateProductUseCase
 {
     public function __construct(
         private readonly ProductRepositoryInterface $productRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(ProductData $data): Product
     {
-        $product = new Product();
+        $product = new Product;
         $product->name = $data->name;
         $product->sku = $data->sku;
         $product->description = $data->description;

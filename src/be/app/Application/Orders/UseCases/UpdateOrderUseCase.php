@@ -12,8 +12,7 @@ class UpdateOrderUseCase
 {
     public function __construct(
         private readonly OrderRepositoryInterface $orderRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id, OrderData $data): ?Order
     {

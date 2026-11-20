@@ -13,7 +13,7 @@ class NotificationTest extends TestCase
 {
     public function test_notification_has_default_pending_status(): void
     {
-        $notification = new Notification();
+        $notification = new Notification;
         $notification->recipient_type = 'user';
         $notification->recipient_id = 'user-123';
         $notification->channel = NotificationChannel::from(NotificationChannel::EMAIL);
@@ -27,7 +27,7 @@ class NotificationTest extends TestCase
 
     public function test_notification_can_be_marked_sent(): void
     {
-        $notification = new Notification();
+        $notification = new Notification;
         $notification->status = NotificationStatus::from(NotificationStatus::PENDING);
         $notification->markSent();
 
@@ -36,7 +36,7 @@ class NotificationTest extends TestCase
 
     public function test_notification_can_fail(): void
     {
-        $notification = new Notification();
+        $notification = new Notification;
         $notification->status = NotificationStatus::from(NotificationStatus::PENDING);
         $notification->markFailed();
 
@@ -45,7 +45,7 @@ class NotificationTest extends TestCase
 
     public function test_notification_can_be_marked_read(): void
     {
-        $notification = new Notification();
+        $notification = new Notification;
         $notification->status = NotificationStatus::from(NotificationStatus::SENT);
         $notification->markRead();
 

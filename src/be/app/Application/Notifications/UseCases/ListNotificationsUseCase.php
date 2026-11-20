@@ -11,8 +11,7 @@ class ListNotificationsUseCase
 {
     public function __construct(
         private readonly NotificationRepositoryInterface $notificationRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(?Pagination $pagination = null): array
     {

@@ -17,8 +17,7 @@ final class PaymentData
         public readonly PaymentMethod $method,
         public readonly PaymentStatus $status,
         public readonly ?string $transactionReference,
-    ) {
-    }
+    ) {}
 
     public static function fromRequest(array $data): self
     {

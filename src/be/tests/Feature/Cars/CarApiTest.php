@@ -11,6 +11,7 @@ use Tests\TestCase;
 class CarApiTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_can_list_cars(): void
     {
         Car::factory()->count(3)->create();
@@ -59,7 +60,7 @@ class CarApiTest extends TestCase
     {
         $car = Car::factory()->create(['brand' => 'Honda', 'model' => 'Civic']);
 
-        $response = $this->getJson('/api/v1/cars/' . $car->id);
+        $response = $this->getJson('/api/v1/cars/'.$car->id);
 
         $response->assertStatus(200)
             ->assertJson(['data' => ['brand' => 'Honda', 'model' => 'Civic']]);
@@ -76,7 +77,7 @@ class CarApiTest extends TestCase
     {
         $car = Car::factory()->create(['status' => 'active']);
 
-        $response = $this->putJson('/api/v1/cars/' . $car->id, [
+        $response = $this->putJson('/api/v1/cars/'.$car->id, [
             'status' => 'sold',
         ]);
 
@@ -93,7 +94,7 @@ class CarApiTest extends TestCase
     {
         $car = Car::factory()->create();
 
-        $response = $this->deleteJson('/api/v1/cars/' . $car->id);
+        $response = $this->deleteJson('/api/v1/cars/'.$car->id);
 
         $response->assertStatus(204);
 

@@ -11,8 +11,7 @@ class GetOrderUseCase
 {
     public function __construct(
         private readonly OrderRepositoryInterface $orderRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id): ?Order
     {

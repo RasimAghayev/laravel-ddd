@@ -11,8 +11,7 @@ class ListCarsUseCase
 {
     public function __construct(
         private readonly CarRepositoryInterface $carRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(?Pagination $pagination = null): array
     {

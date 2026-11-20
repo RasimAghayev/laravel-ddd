@@ -11,8 +11,7 @@ class ListAuditLogsUseCase
 {
     public function __construct(
         private readonly AuditLogRepositoryInterface $auditLogRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(?Pagination $pagination = null): array
     {

@@ -12,7 +12,7 @@ class ProductTest extends TestCase
 {
     public function test_product_has_default_active_status(): void
     {
-        $product = new Product();
+        $product = new Product;
         $product->name = 'Test Product';
         $product->sku = 'TEST-001';
         $product->price_cents = 99900;
@@ -26,7 +26,7 @@ class ProductTest extends TestCase
 
     public function test_product_can_be_deactivated(): void
     {
-        $product = new Product();
+        $product = new Product;
         $product->status = ProductStatus::from(ProductStatus::ACTIVE);
         $product->deactivate();
 
@@ -36,7 +36,7 @@ class ProductTest extends TestCase
 
     public function test_product_can_be_archived(): void
     {
-        $product = new Product();
+        $product = new Product;
         $product->status = ProductStatus::from(ProductStatus::ACTIVE);
         $product->archive();
 

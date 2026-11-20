@@ -11,6 +11,7 @@ use Tests\TestCase;
 class ProductApiTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_can_list_products(): void
     {
         Product::factory()->count(3)->create();
@@ -60,7 +61,7 @@ class ProductApiTest extends TestCase
     {
         $product = Product::factory()->create(['name' => 'Samsung Galaxy']);
 
-        $response = $this->getJson('/api/v1/products/' . $product->id);
+        $response = $this->getJson('/api/v1/products/'.$product->id);
 
         $response->assertStatus(200)
             ->assertJson(['data' => ['name' => 'Samsung Galaxy']]);
@@ -77,7 +78,7 @@ class ProductApiTest extends TestCase
     {
         $product = Product::factory()->create(['stock_quantity' => 10]);
 
-        $response = $this->putJson('/api/v1/products/' . $product->id, [
+        $response = $this->putJson('/api/v1/products/'.$product->id, [
             'stock_quantity' => 25,
         ]);
 
@@ -94,7 +95,7 @@ class ProductApiTest extends TestCase
     {
         $product = Product::factory()->create();
 
-        $response = $this->deleteJson('/api/v1/products/' . $product->id);
+        $response = $this->deleteJson('/api/v1/products/'.$product->id);
 
         $response->assertStatus(204);
 

@@ -14,8 +14,7 @@ final class AuditLogData
         public readonly ?string $subjectType,
         public readonly ?string $subjectId,
         public readonly array $changes,
-    ) {
-    }
+    ) {}
 
     public static function fromRequest(array $data): self
     {

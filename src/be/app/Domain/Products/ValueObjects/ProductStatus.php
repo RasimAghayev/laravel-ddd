@@ -9,15 +9,16 @@ use InvalidArgumentException;
 final class ProductStatus
 {
     public const ACTIVE = 'active';
+
     public const INACTIVE = 'inactive';
+
     public const ARCHIVED = 'archived';
 
     public const array VALUES = [self::ACTIVE, self::INACTIVE, self::ARCHIVED];
 
     private function __construct(
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     public static function from(string $value): self
     {

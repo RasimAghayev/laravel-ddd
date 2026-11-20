@@ -1,5 +1,7 @@
 <?php
 
+use DDD\Domain\Users\User;
+
 return [
 
     /*
@@ -62,7 +64,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', \DDD\Domain\Users\User::class),
+            'model' => env('AUTH_MODEL', User::class),
         ],
 
         // 'users' => [

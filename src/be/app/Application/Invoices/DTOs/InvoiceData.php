@@ -15,8 +15,7 @@ final class InvoiceData
         public readonly string $currency,
         public readonly InvoiceStatus $status,
         public readonly ?string $dueAt,
-    ) {
-    }
+    ) {}
 
     public static function fromRequest(array $data): self
     {

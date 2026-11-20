@@ -9,17 +9,20 @@ use InvalidArgumentException;
 final class InvoiceStatus
 {
     public const DRAFT = 'draft';
+
     public const ISSUED = 'issued';
+
     public const PAID = 'paid';
+
     public const OVERDUE = 'overdue';
+
     public const VOID = 'void';
 
     public const array VALUES = [self::DRAFT, self::ISSUED, self::PAID, self::OVERDUE, self::VOID];
 
     private function __construct(
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     public static function from(string $value): self
     {

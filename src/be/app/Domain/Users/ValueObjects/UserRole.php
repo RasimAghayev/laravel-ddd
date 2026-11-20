@@ -9,15 +9,16 @@ use InvalidArgumentException;
 final class UserRole
 {
     public const ADMIN = 'admin';
+
     public const USER = 'user';
+
     public const MODERATOR = 'moderator';
 
     public const array VALUES = [self::ADMIN, self::USER, self::MODERATOR];
 
     private function __construct(
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     public static function from(string $value): self
     {

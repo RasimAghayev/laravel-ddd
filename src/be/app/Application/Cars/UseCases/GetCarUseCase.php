@@ -11,8 +11,7 @@ class GetCarUseCase
 {
     public function __construct(
         private readonly CarRepositoryInterface $carRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id): ?Car
     {

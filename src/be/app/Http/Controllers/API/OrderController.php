@@ -10,12 +10,12 @@ use DDD\Application\Orders\UseCases\DeleteOrderUseCase;
 use DDD\Application\Orders\UseCases\GetOrderUseCase;
 use DDD\Application\Orders\UseCases\ListOrdersUseCase;
 use DDD\Application\Orders\UseCases\UpdateOrderUseCase;
+use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Http\Controllers\Controller;
 use DDD\Http\Requests\StoreOrderRequest;
 use DDD\Http\Requests\UpdateOrderRequest;
 use DDD\Http\Resources\OrderResource;
 use DDD\Http\Resources\OrderResourceCollection;
-use DDD\Domain\Shared\Criteria\Pagination;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -28,8 +28,7 @@ class OrderController extends Controller
         private readonly GetOrderUseCase $getOrder,
         private readonly UpdateOrderUseCase $updateOrder,
         private readonly DeleteOrderUseCase $deleteOrder,
-    ) {
-    }
+    ) {}
 
     public function index(Request $request): OrderResourceCollection
     {

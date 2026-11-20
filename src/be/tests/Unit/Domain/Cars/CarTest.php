@@ -13,7 +13,7 @@ class CarTest extends TestCase
 {
     public function test_car_has_default_active_status(): void
     {
-        $car = new Car();
+        $car = new Car;
         $car->brand = 'Toyota';
         $car->model = 'Camry';
         $car->year = 2023;
@@ -27,7 +27,7 @@ class CarTest extends TestCase
 
     public function test_car_can_be_sold(): void
     {
-        $car = new Car();
+        $car = new Car;
         $car->status = CarStatus::from(CarStatus::ACTIVE);
         $car->sell();
 
@@ -37,7 +37,7 @@ class CarTest extends TestCase
 
     public function test_car_can_be_reserved(): void
     {
-        $car = new Car();
+        $car = new Car;
         $car->status = CarStatus::from(CarStatus::ACTIVE);
         $car->reserve();
 

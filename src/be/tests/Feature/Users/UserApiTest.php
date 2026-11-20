@@ -11,6 +11,7 @@ use Tests\TestCase;
 class UserApiTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_can_list_users(): void
     {
         User::factory()->count(3)->create();
@@ -56,7 +57,7 @@ class UserApiTest extends TestCase
     {
         $user = User::factory()->create(['name' => 'Jane', 'email' => 'jane@example.com']);
 
-        $response = $this->getJson('/api/v1/users/' . $user->id);
+        $response = $this->getJson('/api/v1/users/'.$user->id);
 
         $response->assertStatus(200)
             ->assertJson(['data' => ['name' => 'Jane', 'email' => 'jane@example.com']]);
@@ -73,7 +74,7 @@ class UserApiTest extends TestCase
     {
         $user = User::factory()->create(['role' => 'user']);
 
-        $response = $this->putJson('/api/v1/users/' . $user->id, [
+        $response = $this->putJson('/api/v1/users/'.$user->id, [
             'role' => 'moderator',
         ]);
 
@@ -85,7 +86,7 @@ class UserApiTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $response = $this->deleteJson('/api/v1/users/' . $user->id);
+        $response = $this->deleteJson('/api/v1/users/'.$user->id);
 
         $response->assertStatus(204);
 

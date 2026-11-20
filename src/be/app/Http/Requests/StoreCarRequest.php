@@ -18,7 +18,7 @@ class StoreCarRequest extends FormRequest
         return [
             'brand' => ['required', 'string', 'max:100'],
             'model' => ['required', 'string', 'max:100'],
-            'year' => ['required', 'integer', 'min:1900', 'max:' . (date('Y') + 1)],
+            'year' => ['required', 'integer', 'min:1900', 'max:'.(date('Y') + 1)],
             'price' => ['required', 'numeric', 'min:0'],
             'currency' => ['sometimes', 'string', 'size:3', 'in:USD,EUR,AZN'],
             'status' => ['sometimes', 'string', 'in:active,sold,reserved,maintenance'],

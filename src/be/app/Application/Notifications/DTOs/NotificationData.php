@@ -16,8 +16,7 @@ final class NotificationData
         public readonly string $subject,
         public readonly string $content,
         public readonly NotificationStatus $status,
-    ) {
-    }
+    ) {}
 
     public static function fromRequest(array $data): self
     {

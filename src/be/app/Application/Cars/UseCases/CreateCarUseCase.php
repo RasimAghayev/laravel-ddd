@@ -12,12 +12,11 @@ class CreateCarUseCase
 {
     public function __construct(
         private readonly CarRepositoryInterface $carRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(CarData $data): Car
     {
-        $car = new Car();
+        $car = new Car;
         $car->brand = $data->brand;
         $car->model = $data->model;
         $car->year = $data->year;

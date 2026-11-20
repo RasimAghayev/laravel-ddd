@@ -12,6 +12,7 @@ use Tests\TestCase;
 class OrderApiTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_can_list_orders(): void
     {
         Order::factory()->count(3)->create();
@@ -60,7 +61,7 @@ class OrderApiTest extends TestCase
     {
         $order = Order::factory()->create();
 
-        $response = $this->getJson('/api/v1/orders/' . $order->id);
+        $response = $this->getJson('/api/v1/orders/'.$order->id);
 
         $response->assertStatus(200)
             ->assertJson(['data' => ['id' => (string) $order->id]]);
@@ -77,7 +78,7 @@ class OrderApiTest extends TestCase
     {
         $order = Order::factory()->create(['status' => 'pending']);
 
-        $response = $this->putJson('/api/v1/orders/' . $order->id, [
+        $response = $this->putJson('/api/v1/orders/'.$order->id, [
             'status' => 'confirmed',
         ]);
 
@@ -94,7 +95,7 @@ class OrderApiTest extends TestCase
     {
         $order = Order::factory()->create();
 
-        $response = $this->deleteJson('/api/v1/orders/' . $order->id);
+        $response = $this->deleteJson('/api/v1/orders/'.$order->id);
 
         $response->assertStatus(204);
 

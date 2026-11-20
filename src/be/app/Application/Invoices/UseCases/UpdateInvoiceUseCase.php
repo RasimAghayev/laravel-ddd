@@ -12,8 +12,7 @@ class UpdateInvoiceUseCase
 {
     public function __construct(
         private readonly InvoiceRepositoryInterface $invoiceRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id, InvoiceData $data): ?Invoice
     {

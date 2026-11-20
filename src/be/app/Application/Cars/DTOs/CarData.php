@@ -16,8 +16,7 @@ final class CarData
         public readonly int $year,
         public readonly Price $price,
         public readonly CarStatus $status,
-    ) {
-    }
+    ) {}
 
     public static function fromRequest(array $data): self
     {

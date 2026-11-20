@@ -10,8 +10,7 @@ class DeleteProductUseCase
 {
     public function __construct(
         private readonly ProductRepositoryInterface $productRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id): bool
     {

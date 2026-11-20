@@ -17,7 +17,7 @@ class UpdateProductRequest extends FormRequest
     {
         return [
             'name' => ['sometimes', 'string', 'max:255'],
-            'sku' => ['sometimes', 'string', 'max:100', 'unique:products,sku,' . $this->route('product')],
+            'sku' => ['sometimes', 'string', 'max:100', 'unique:products,sku,'.$this->route('product')],
             'description' => ['sometimes', 'string'],
             'price_cents' => ['sometimes', 'integer', 'min:0'],
             'currency' => ['sometimes', 'string', 'size:3', 'in:USD,EUR,AZN'],

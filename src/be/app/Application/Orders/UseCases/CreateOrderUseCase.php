@@ -12,12 +12,11 @@ class CreateOrderUseCase
 {
     public function __construct(
         private readonly OrderRepositoryInterface $orderRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(OrderData $data): Order
     {
-        $order = new Order();
+        $order = new Order;
         $order->user_id = $data->userId;
         $order->total_cents = $data->totalCents;
         $order->currency = $data->currency;

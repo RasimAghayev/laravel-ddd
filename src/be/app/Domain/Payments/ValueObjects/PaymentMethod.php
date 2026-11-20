@@ -9,16 +9,18 @@ use InvalidArgumentException;
 final class PaymentMethod
 {
     public const CREDIT_CARD = 'credit_card';
+
     public const BANK_TRANSFER = 'bank_transfer';
+
     public const PAYPAL = 'paypal';
+
     public const CASH = 'cash';
 
     public const array VALUES = [self::CREDIT_CARD, self::BANK_TRANSFER, self::PAYPAL, self::CASH];
 
     private function __construct(
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     public static function from(string $value): self
     {

@@ -11,8 +11,7 @@ class GetPaymentUseCase
 {
     public function __construct(
         private readonly PaymentRepositoryInterface $paymentRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id): ?Payment
     {

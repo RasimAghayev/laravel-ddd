@@ -25,6 +25,7 @@ final class Price
     public static function fromDecimal(string $decimal, string $currency = 'USD'): self
     {
         $cents = (int) round((float) $decimal * 100);
+
         return new self($cents, $currency);
     }
 
@@ -35,6 +36,6 @@ final class Price
 
     public function __toString(): string
     {
-        return $this->toDecimal() . ' ' . $this->currency;
+        return $this->toDecimal().' '.$this->currency;
     }
 }

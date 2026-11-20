@@ -10,12 +10,12 @@ use DDD\Application\Payments\UseCases\DeletePaymentUseCase;
 use DDD\Application\Payments\UseCases\GetPaymentUseCase;
 use DDD\Application\Payments\UseCases\ListPaymentsUseCase;
 use DDD\Application\Payments\UseCases\UpdatePaymentUseCase;
+use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Http\Controllers\Controller;
 use DDD\Http\Requests\StorePaymentRequest;
 use DDD\Http\Requests\UpdatePaymentRequest;
 use DDD\Http\Resources\PaymentResource;
 use DDD\Http\Resources\PaymentResourceCollection;
-use DDD\Domain\Shared\Criteria\Pagination;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -28,8 +28,7 @@ class PaymentController extends Controller
         private readonly GetPaymentUseCase $getPayment,
         private readonly UpdatePaymentUseCase $updatePayment,
         private readonly DeletePaymentUseCase $deletePayment,
-    ) {
-    }
+    ) {}
 
     public function index(Request $request): PaymentResourceCollection
     {

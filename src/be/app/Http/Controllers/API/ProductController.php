@@ -10,12 +10,12 @@ use DDD\Application\Products\UseCases\DeleteProductUseCase;
 use DDD\Application\Products\UseCases\GetProductUseCase;
 use DDD\Application\Products\UseCases\ListProductsUseCase;
 use DDD\Application\Products\UseCases\UpdateProductUseCase;
+use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Http\Controllers\Controller;
 use DDD\Http\Requests\StoreProductRequest;
 use DDD\Http\Requests\UpdateProductRequest;
 use DDD\Http\Resources\ProductResource;
 use DDD\Http\Resources\ProductResourceCollection;
-use DDD\Domain\Shared\Criteria\Pagination;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -28,8 +28,7 @@ class ProductController extends Controller
         private readonly GetProductUseCase $getProduct,
         private readonly UpdateProductUseCase $updateProduct,
         private readonly DeleteProductUseCase $deleteProduct,
-    ) {
-    }
+    ) {}
 
     public function index(Request $request): ProductResourceCollection
     {

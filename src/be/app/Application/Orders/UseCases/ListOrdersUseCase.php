@@ -11,8 +11,7 @@ class ListOrdersUseCase
 {
     public function __construct(
         private readonly OrderRepositoryInterface $orderRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(?Pagination $pagination = null): array
     {

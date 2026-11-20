@@ -10,8 +10,7 @@ class DeleteOrderUseCase
 {
     public function __construct(
         private readonly OrderRepositoryInterface $orderRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id): bool
     {

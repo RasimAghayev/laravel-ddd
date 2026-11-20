@@ -7,11 +7,11 @@ namespace DDD\Http\Controllers\API;
 use DDD\Application\AuditLog\DTOs\AuditLogData;
 use DDD\Application\AuditLog\UseCases\CreateAuditLogUseCase;
 use DDD\Application\AuditLog\UseCases\ListAuditLogsUseCase;
+use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Http\Controllers\Controller;
 use DDD\Http\Requests\StoreAuditLogRequest;
 use DDD\Http\Resources\AuditLogResource;
 use DDD\Http\Resources\AuditLogResourceCollection;
-use DDD\Domain\Shared\Criteria\Pagination;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -21,8 +21,7 @@ class AuditLogController extends Controller
     public function __construct(
         private readonly ListAuditLogsUseCase $listAuditLogs,
         private readonly CreateAuditLogUseCase $createAuditLog,
-    ) {
-    }
+    ) {}
 
     public function index(Request $request): AuditLogResourceCollection
     {

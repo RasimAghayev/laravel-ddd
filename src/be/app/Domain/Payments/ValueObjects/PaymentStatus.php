@@ -9,17 +9,20 @@ use InvalidArgumentException;
 final class PaymentStatus
 {
     public const PENDING = 'pending';
+
     public const COMPLETED = 'completed';
+
     public const FAILED = 'failed';
+
     public const REFUNDED = 'refunded';
+
     public const CANCELLED = 'cancelled';
 
     public const array VALUES = [self::PENDING, self::COMPLETED, self::FAILED, self::REFUNDED, self::CANCELLED];
 
     private function __construct(
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     public static function from(string $value): self
     {

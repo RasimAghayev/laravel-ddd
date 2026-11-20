@@ -13,7 +13,7 @@ class UserTest extends TestCase
 {
     public function test_user_has_default_user_role(): void
     {
-        $user = new User();
+        $user = new User;
         $user->name = 'John';
         $user->email = 'john@example.com';
 
@@ -23,7 +23,7 @@ class UserTest extends TestCase
 
     public function test_user_can_be_promoted_to_admin(): void
     {
-        $user = new User();
+        $user = new User;
         $user->promoteToAdmin();
 
         $this->assertTrue($user->isAdmin());
@@ -32,7 +32,7 @@ class UserTest extends TestCase
 
     public function test_user_can_be_demoted(): void
     {
-        $user = new User();
+        $user = new User;
         $user->promoteToAdmin();
         $user->demoteToUser();
 

@@ -12,7 +12,7 @@ class InvoiceTest extends TestCase
 {
     public function test_invoice_has_default_draft_status(): void
     {
-        $invoice = new Invoice();
+        $invoice = new Invoice;
         $invoice->order_id = 'order-1';
         $invoice->amount_cents = 2500000;
         $invoice->currency = 'USD';
@@ -24,7 +24,7 @@ class InvoiceTest extends TestCase
 
     public function test_invoice_can_be_issued(): void
     {
-        $invoice = new Invoice();
+        $invoice = new Invoice;
         $invoice->status = InvoiceStatus::from(InvoiceStatus::DRAFT);
         $invoice->issue();
 
@@ -33,7 +33,7 @@ class InvoiceTest extends TestCase
 
     public function test_invoice_can_be_paid(): void
     {
-        $invoice = new Invoice();
+        $invoice = new Invoice;
         $invoice->status = InvoiceStatus::from(InvoiceStatus::ISSUED);
         $invoice->pay();
 
@@ -42,7 +42,7 @@ class InvoiceTest extends TestCase
 
     public function test_invoice_can_be_voided(): void
     {
-        $invoice = new Invoice();
+        $invoice = new Invoice;
         $invoice->status = InvoiceStatus::from(InvoiceStatus::ISSUED);
         $invoice->void();
 

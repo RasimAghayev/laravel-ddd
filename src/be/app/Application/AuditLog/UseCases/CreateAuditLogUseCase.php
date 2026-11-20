@@ -12,12 +12,11 @@ class CreateAuditLogUseCase
 {
     public function __construct(
         private readonly AuditLogRepositoryInterface $auditLogRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(AuditLogData $data): AuditLog
     {
-        $auditLog = new AuditLog();
+        $auditLog = new AuditLog;
         $auditLog->actor_type = $data->actorType;
         $auditLog->actor_id = $data->actorId;
         $auditLog->action = $data->action;

@@ -10,12 +10,12 @@ use DDD\Application\Users\UseCases\DeleteUserUseCase;
 use DDD\Application\Users\UseCases\GetUserUseCase;
 use DDD\Application\Users\UseCases\ListUsersUseCase;
 use DDD\Application\Users\UseCases\UpdateUserUseCase;
+use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Http\Controllers\Controller;
 use DDD\Http\Requests\StoreUserRequest;
 use DDD\Http\Requests\UpdateUserRequest;
 use DDD\Http\Resources\UserResource;
 use DDD\Http\Resources\UserResourceCollection;
-use DDD\Domain\Shared\Criteria\Pagination;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -28,8 +28,7 @@ class UserController extends Controller
         private readonly GetUserUseCase $getUser,
         private readonly UpdateUserUseCase $updateUser,
         private readonly DeleteUserUseCase $deleteUser,
-    ) {
-    }
+    ) {}
 
     public function index(Request $request): UserResourceCollection
     {

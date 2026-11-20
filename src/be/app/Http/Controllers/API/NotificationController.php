@@ -10,12 +10,12 @@ use DDD\Application\Notifications\UseCases\DeleteNotificationUseCase;
 use DDD\Application\Notifications\UseCases\GetNotificationUseCase;
 use DDD\Application\Notifications\UseCases\ListNotificationsUseCase;
 use DDD\Application\Notifications\UseCases\UpdateNotificationUseCase;
+use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Http\Controllers\Controller;
 use DDD\Http\Requests\StoreNotificationRequest;
 use DDD\Http\Requests\UpdateNotificationRequest;
 use DDD\Http\Resources\NotificationResource;
 use DDD\Http\Resources\NotificationResourceCollection;
-use DDD\Domain\Shared\Criteria\Pagination;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -28,8 +28,7 @@ class NotificationController extends Controller
         private readonly GetNotificationUseCase $getNotification,
         private readonly UpdateNotificationUseCase $updateNotification,
         private readonly DeleteNotificationUseCase $deleteNotification,
-    ) {
-    }
+    ) {}
 
     public function index(Request $request): NotificationResourceCollection
     {

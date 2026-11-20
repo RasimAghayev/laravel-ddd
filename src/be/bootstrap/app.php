@@ -16,13 +16,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(/**
-     * @param Middleware $middleware
+     * @param  Middleware  $middleware
      * @return void
      */ callback: function (Middleware $middleware) {
         //
     })
     ->withExceptions(/**
-     * @param Exceptions $exceptions
+     * @param  Exceptions  $exceptions
      * @return void
      */ using: function (Exceptions $exceptions) {
         //

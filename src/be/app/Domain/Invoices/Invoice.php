@@ -31,12 +31,12 @@ class Invoice extends Model
 
     public function invoiceNumber(): string
     {
-        return 'INV-' . str_pad((string) $this->getKey(), 8, '0', STR_PAD_LEFT);
+        return 'INV-'.str_pad((string) $this->getKey(), 8, '0', STR_PAD_LEFT);
     }
 
     public function amount(): string
     {
-        return number_format($this->amount_cents / 100, 2, '.', '') . ' ' . ($this->currency ?? 'USD');
+        return number_format($this->amount_cents / 100, 2, '.', '').' '.($this->currency ?? 'USD');
     }
 
     public function status(): InvoiceStatus

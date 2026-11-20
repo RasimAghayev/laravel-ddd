@@ -9,16 +9,18 @@ use InvalidArgumentException;
 final class NotificationChannel
 {
     public const EMAIL = 'email';
+
     public const SMS = 'sms';
+
     public const PUSH = 'push';
+
     public const WEBHOOK = 'webhook';
 
     public const array VALUES = [self::EMAIL, self::SMS, self::PUSH, self::WEBHOOK];
 
     private function __construct(
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     public static function from(string $value): self
     {

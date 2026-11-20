@@ -24,12 +24,12 @@ class Product extends Model
 
     public function sku(): string
     {
-        return 'PROD-' . str_pad((string) $this->getKey(), 8, '0', STR_PAD_LEFT);
+        return 'PROD-'.str_pad((string) $this->getKey(), 8, '0', STR_PAD_LEFT);
     }
 
     public function price(): string
     {
-        return number_format($this->price_cents / 100, 2, '.', '') . ' ' . ($this->currency ?? 'USD');
+        return number_format($this->price_cents / 100, 2, '.', '').' '.($this->currency ?? 'USD');
     }
 
     public function status(): ProductStatus

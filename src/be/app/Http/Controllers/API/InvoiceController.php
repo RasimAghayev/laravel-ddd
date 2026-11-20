@@ -10,12 +10,12 @@ use DDD\Application\Invoices\UseCases\DeleteInvoiceUseCase;
 use DDD\Application\Invoices\UseCases\GetInvoiceUseCase;
 use DDD\Application\Invoices\UseCases\ListInvoicesUseCase;
 use DDD\Application\Invoices\UseCases\UpdateInvoiceUseCase;
+use DDD\Domain\Shared\Criteria\Pagination;
 use DDD\Http\Controllers\Controller;
 use DDD\Http\Requests\StoreInvoiceRequest;
 use DDD\Http\Requests\UpdateInvoiceRequest;
 use DDD\Http\Resources\InvoiceResource;
 use DDD\Http\Resources\InvoiceResourceCollection;
-use DDD\Domain\Shared\Criteria\Pagination;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -28,8 +28,7 @@ class InvoiceController extends Controller
         private readonly GetInvoiceUseCase $getInvoice,
         private readonly UpdateInvoiceUseCase $updateInvoice,
         private readonly DeleteInvoiceUseCase $deleteInvoice,
-    ) {
-    }
+    ) {}
 
     public function index(Request $request): InvoiceResourceCollection
     {

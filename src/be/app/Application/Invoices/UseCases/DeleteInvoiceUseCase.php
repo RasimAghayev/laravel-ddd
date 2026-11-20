@@ -10,8 +10,7 @@ class DeleteInvoiceUseCase
 {
     public function __construct(
         private readonly InvoiceRepositoryInterface $invoiceRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id): bool
     {

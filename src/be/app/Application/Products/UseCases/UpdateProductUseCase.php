@@ -12,8 +12,7 @@ class UpdateProductUseCase
 {
     public function __construct(
         private readonly ProductRepositoryInterface $productRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id, ProductData $data): ?Product
     {

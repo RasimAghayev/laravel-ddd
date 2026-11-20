@@ -11,6 +11,7 @@ use Tests\TestCase;
 class NotificationApiTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_can_list_notifications(): void
     {
         Notification::factory()->count(3)->create();
@@ -59,7 +60,7 @@ class NotificationApiTest extends TestCase
     {
         $notification = Notification::factory()->create();
 
-        $response = $this->getJson('/api/v1/notifications/' . $notification->id);
+        $response = $this->getJson('/api/v1/notifications/'.$notification->id);
 
         $response->assertStatus(200)
             ->assertJson(['data' => ['id' => (string) $notification->id]]);
@@ -76,7 +77,7 @@ class NotificationApiTest extends TestCase
     {
         $notification = Notification::factory()->create(['status' => 'pending']);
 
-        $response = $this->putJson('/api/v1/notifications/' . $notification->id, [
+        $response = $this->putJson('/api/v1/notifications/'.$notification->id, [
             'status' => 'sent',
         ]);
 
@@ -93,7 +94,7 @@ class NotificationApiTest extends TestCase
     {
         $notification = Notification::factory()->create();
 
-        $response = $this->deleteJson('/api/v1/notifications/' . $notification->id);
+        $response = $this->deleteJson('/api/v1/notifications/'.$notification->id);
 
         $response->assertStatus(204);
 

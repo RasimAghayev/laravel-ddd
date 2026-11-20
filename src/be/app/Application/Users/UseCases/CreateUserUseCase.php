@@ -13,12 +13,11 @@ class CreateUserUseCase
 {
     public function __construct(
         private readonly UserRepositoryInterface $userRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(UserData $data): User
     {
-        $user = new User();
+        $user = new User;
         $user->name = $data->name;
         $user->email = (string) $data->email;
         $user->password = Hash::make($data->password);

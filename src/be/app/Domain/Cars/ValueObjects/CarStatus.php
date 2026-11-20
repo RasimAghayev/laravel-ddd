@@ -9,16 +9,18 @@ use InvalidArgumentException;
 final class CarStatus
 {
     public const ACTIVE = 'active';
+
     public const SOLD = 'sold';
+
     public const RESERVED = 'reserved';
+
     public const MAINTENANCE = 'maintenance';
 
     public const array VALUES = [self::ACTIVE, self::SOLD, self::RESERVED, self::MAINTENANCE];
 
     private function __construct(
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     public static function from(string $value): self
     {

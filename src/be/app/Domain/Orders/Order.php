@@ -30,12 +30,12 @@ class Order extends Model
 
     public function orderNumber(): string
     {
-        return 'ORD-' . str_pad((string) $this->getKey(), 8, '0', STR_PAD_LEFT);
+        return 'ORD-'.str_pad((string) $this->getKey(), 8, '0', STR_PAD_LEFT);
     }
 
     public function total(): string
     {
-        return number_format($this->total_cents / 100, 2, '.', '') . ' ' . ($this->currency ?? 'USD');
+        return number_format($this->total_cents / 100, 2, '.', '').' '.($this->currency ?? 'USD');
     }
 
     public function status(): OrderStatus

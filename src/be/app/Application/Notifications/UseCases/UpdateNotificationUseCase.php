@@ -12,8 +12,7 @@ class UpdateNotificationUseCase
 {
     public function __construct(
         private readonly NotificationRepositoryInterface $notificationRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(string $id, NotificationData $data): ?Notification
     {

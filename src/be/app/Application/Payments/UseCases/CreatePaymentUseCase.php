@@ -12,12 +12,11 @@ class CreatePaymentUseCase
 {
     public function __construct(
         private readonly PaymentRepositoryInterface $paymentRepository,
-    ) {
-    }
+    ) {}
 
     public function execute(PaymentData $data): Payment
     {
-        $payment = new Payment();
+        $payment = new Payment;
         $payment->order_id = $data->orderId;
         $payment->amount_cents = $data->amountCents;
         $payment->currency = $data->currency;

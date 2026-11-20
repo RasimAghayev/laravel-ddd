@@ -11,6 +11,7 @@ use Tests\TestCase;
 class AuditLogApiTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_can_list_audit_logs(): void
     {
         AuditLog::factory()->count(3)->create();
@@ -58,7 +59,7 @@ class AuditLogApiTest extends TestCase
     {
         $log = AuditLog::factory()->create(['action' => 'update']);
 
-        $response = $this->getJson('/api/v1/audit-logs/' . $log->id);
+        $response = $this->getJson('/api/v1/audit-logs/'.$log->id);
 
         $response->assertStatus(200)
             ->assertJson(['data' => ['action' => 'update']]);

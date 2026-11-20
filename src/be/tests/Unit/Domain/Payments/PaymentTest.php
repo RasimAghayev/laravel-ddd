@@ -13,7 +13,7 @@ class PaymentTest extends TestCase
 {
     public function test_payment_has_default_pending_status(): void
     {
-        $payment = new Payment();
+        $payment = new Payment;
         $payment->order_id = 'order-1';
         $payment->amount_cents = 2500000;
         $payment->currency = 'USD';
@@ -26,7 +26,7 @@ class PaymentTest extends TestCase
 
     public function test_payment_can_be_completed(): void
     {
-        $payment = new Payment();
+        $payment = new Payment;
         $payment->status = PaymentStatus::from(PaymentStatus::PENDING);
         $payment->complete('txn_123');
 
@@ -36,7 +36,7 @@ class PaymentTest extends TestCase
 
     public function test_payment_can_fail(): void
     {
-        $payment = new Payment();
+        $payment = new Payment;
         $payment->status = PaymentStatus::from(PaymentStatus::PENDING);
         $payment->fail();
 
@@ -45,7 +45,7 @@ class PaymentTest extends TestCase
 
     public function test_payment_can_be_refunded(): void
     {
-        $payment = new Payment();
+        $payment = new Payment;
         $payment->status = PaymentStatus::from(PaymentStatus::COMPLETED);
         $payment->refund();
 
